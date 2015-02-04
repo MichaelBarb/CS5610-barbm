@@ -1,0 +1,5 @@
+﻿../story/whatisnext.htm?../myStories/exprWeek02.txt                Experiments Week 2
+../myTests/Week02/PageLinks1Target.aspx                            PageLinks Part 1 Target Arguments
+../myTests/Week02/PageLinks2Window.aspx                            PageLinks Part 2 Another Window
+../myTests/Week02/PageLinks3SnippetBox.aspx                        PageLinks Part 3 Snippet Box
+../story/index.htm?../myStories/exprWk02_01.txt                    Week 2 Number 1 - MasterPage

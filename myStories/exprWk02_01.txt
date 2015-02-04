@@ -1,0 +1,6 @@
+﻿../story/whatisnext.htm?../myStories/exprWk02_01.txt                    Experiment Week 2 Number 1
+../myTests/Week02/MasterPage/MasterPage.aspx                               Demo:    Master Page
+../story/showfile.htm?../myTests/Week02/MasterPage/MasterPage.aspx         Result:  Default.aspx
+../fileview/Default.aspx?~/myTests/Week02/MasterPage/MasterPage.css     Source:  StyleSheet
+../fileview/Default.aspx?~/myTests/Week02/MasterPage/MasterPage.master  Source:  MasterPage Source
+../fileview/Default.aspx?~/myTests/Week02/MasterPage/MasterPage.aspx       Source:  Default.aspx

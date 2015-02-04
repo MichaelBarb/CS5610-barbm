@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="MasterPage.css" rel="stylesheet" type="text/css" />
+    <%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <div class="headerIcon">
+                <asp:ContentPlaceHolder ID="contentHeaderIcon" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="headerBody">
+                <asp:ContentPlaceHolder ID="contentHeaderBody" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </header>
+
+        <nav>
+            <asp:ContentPlaceHolder ID="ContentNav" runat="server">
+            </asp:ContentPlaceHolder>
+        </nav>
+        <section>
+            <asp:ContentPlaceHolder ID="contentBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+        <footer>
+            <asp:ContentPlaceHolder ID="contentFooter" runat="server">
+            </asp:ContentPlaceHolder>
+        </footer>
+    </form>
+</body>
+
+</html>
