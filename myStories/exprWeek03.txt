@@ -1,4 +1,4 @@
-﻿../story/whatisnext.htm?../myStories/exprWeek03.txt                Experiments Week 3
+﻿../story/whatisnext.htm?../myStories/exprWeek03.txt                Experiments Week 3 - Bootstrap
 ../myTests/Week03/Bootstrap1.html                                  BootStrap Test 1
 ../myTests/Week03/Bootstrap2.html                                  BootStrap Test 2, CSS
 ../myTests/Week03/Bootstrap3.html                                  BootStrap Test 3, HTML Reset Only
