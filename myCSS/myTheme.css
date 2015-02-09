@@ -9,3 +9,20 @@ p, ul {
 h1, h2, h3, h4, h5, h6 {
     color: darkblue;
 }
+
+ul {
+    list-style: none;
+}
+
+.snippetBox {
+    padding: 15px;
+    border: solid 3px black;
+    margin: 20px 50px;
+    background-color: #d0e0ff;
+}
+
+.snippetText {
+    font-family: monospace;
+    font-size: 80%;
+    margin: 2px;
+}

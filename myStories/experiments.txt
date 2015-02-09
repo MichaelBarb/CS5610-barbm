@@ -1,8 +1,9 @@
 ﻿../story/whatisnext.htm?../myStories/experiments.txt              Experiments
-../story/index.htm?../myStories/exprWeek02.txt                    Week  2 - Page Links
-../story/index.htm?../myStories/exprWk02_01.txt                   Week  2 - Master Page
+../story/index.htm?../myStories/exprWeek02a.txt                   Week  2 - Page Links
+../story/index.htm?../myStories/exprWeek02b.txt                   Week  2 - Master Page
 ../story/index.htm?../myStories/exprWeek03.txt                    Week  3 - Bootstrap
-../story/index.htm?../myStories/exprWeek04.txt                    Week  4
+../story/index.htm?../myStories/exprWeek04a.txt                   Week  4 - jQuery Versions
+../story/index.htm?../myStories/exprWeek04b.txt                   Week  4
 ../story/index.htm?../myStories/exprWeek05.txt                    Week  5
 ../story/index.htm?../myStories/exprWeek06.txt                    Week  6
 ../story/index.htm?../myStories/exprWeek07.txt                    Week  7

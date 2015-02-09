@@ -1,0 +1,4 @@
+﻿../story/whatisnext.htm?../myStories/exprWeek04a.txt               Experiments Week 4 - jQuery Version
+../myTests/Week04/jQuery1_09_0.html                                Bootstrap with jQuery1.9.0
+../myTests/Week04/jQuery1_11_2.html                                Bootstrap with jQuery1.11.2
+../myTests/Week04/jQuery2_1_3.html                                 Bootstrap with jQuery2.1.3

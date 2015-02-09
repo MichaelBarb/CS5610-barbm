@@ -1,2 +1,2 @@
-﻿../story/whatisnext.htm?../myStories/exprWeek03.txt                Experiments Week 3
+﻿../story/whatisnext.htm?../myStories/exprWeek06.txt                Experiments Week 6
 ../myTests/Week03/Bootstrap1.aspx                                  To Be Added
