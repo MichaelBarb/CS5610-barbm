@@ -1,2 +1,2 @@
-﻿../story/whatisnext.htm?../myStories/exprWeek04b.txt               Experiments Week 4b
-../myTests/Week03/Bootstrap1.aspx                                  To Be Added
+﻿../story/whatisnext.htm?../myStories/exprWeek04b.txt            Experiments Week 4 - Page Cache
+../myTests/Week04/PageCache.html								Page Cache

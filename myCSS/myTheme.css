@@ -1,8 +1,8 @@
 ﻿body {
-    margin: 1em;
+    margin: 20px;
 }
 
-p, ul {
+p, ul, ol {
     color: black;
 }
 
@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 
 ul {
     list-style: none;
+}
+
+ol {
+    margin: 20px;
 }
 
 .snippetBox {
@@ -25,4 +29,12 @@ ul {
     font-family: monospace;
     font-size: 80%;
     margin: 2px;
+}
+
+.Indent1 {
+    margin: 20px;
+}
+
+.Indent2 {
+    margin: 40px;
 }

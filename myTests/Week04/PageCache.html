@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Page Cache</title>
+    <link href="../../myCSS/html5reset-1.6.1.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h1>Page Cache</h1>
+        <p>
+            This is 2 experiments.  One was in Internet Explorer.  The other was in Chrome.
+            There was a lot of research behind both of them.
+        </p>
+    </div>
+    <hr />
+    <div>
+        <h4>Summary</h4>
+        <p>
+            In debugging I am have some problems with the page being
+            cached by the browser.&nbsp; Please note the following scenario.
+        </p>
+        <ol type="1">
+            <li>Open site in Visual Studio debug.&nbsp; You are opening a local host.</li>
+            <li>Open a page in the Story utility and find error.</li>
+            <li>Close VS debug.</li>
+            <li>Edit page and save. </li>
+            <li>Open site in VS debug.</li>
+            <li>Open page in story. </li>
+        </ol>
+        <p>
+            The old page is opened and not the revised one.&nbsp; You
+            must hit the refresh button you will get the new one.
+        </p>
+        <p>
+            This problem is not just in the story utility but applies to
+            a web page.&nbsp; To insure you get the newer
+            revision from the server and not the cached page I
+            found the following solution:
+        </p>
+        <br />
+        <h4>Internet Explorer:</h4>
+        <p class="Indent1">
+            Goto:&nbsp;&nbsp; Tools/Internet Options/General/Settings
+        </p>
+        <p>
+            Under "Check for newer versions of stored pages:" you will
+            find several radio buttons.
+        </p>
+        <p class="Indent1">
+            Default is "Every time I start Internet Explorer".
+        </p>
+        <p class="Indent1">
+            Change to Every time I visit a webpage"
+        </p>
+        <br />
+        <h4>Chrome:</h4>
+        <p>
+            The problem noted in this thread also exists in
+            Chrome.&nbsp; Chrome does not have a similar choice of when to check
+            for&nbsp;newer versions.&nbsp; It always defaults to &quot;Every time I start
+            Chrome&quot; There is an extension you can add&nbsp; "Page
+            Monitor" It will at least notify you of changes.&nbsp; It still
+            requires manual intervention so&nbsp;for&nbsp;our development purposes it is
+            not as good as the Internet Explorer option.&nbsp;&nbsp;For all you Chrome lovers,
+            here is a chance to make a simple extension to build a reputation for yourself.
+        </p>
+        <br />
+        <h4>Other Solutions:</h4>
+        <p>
+            <b>Meta Tags: &nbsp;</b> When you look around the web for answers to the problem of
+            caching and updates there are several solutions that involve Meta tags.&nbsp;
+            Many are out of date. They often do not work on all browsers, especially
+            newer versions.&nbsp;
+        </p>
+        <p>
+            <b>JavaScript: &nbsp;</b>There are other solution that involve JavaScript.&nbsp; I
+            never found a good one but I am sure there must be one somewhere.
+        </p>
+
+    </div>
+
+    <hr />
+    <div>
+        <h4>Source Code </h4>
+        <a href="../../fileview/Default.aspx?~/myTests/Week04/PageCache.html" target="_blank">View Source: Page</a>
+    </div>
+    <hr />
+    <div>
+        <h4>References</h4>
+        <p>
+            Many different sites.  Some of the best answers were on
+            <a href="http://stackoverflow.com/" target="_blank">StackOverflow</a>.
+            Still most of them really answered the question but gave me new search que's.
+        </p>
+        <br />
+        <p>
+            I posted a question
+            <a href="http://stackoverflow.com/questions/28439543/forcing-browser-refresh" target="_blank">Forcing Browser Refresh</a>
+            in StackOverflow.  I have yet to get any good answers back.
+        </p>
+
+    </div>
+    <hr />
+    <script src="../../Scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

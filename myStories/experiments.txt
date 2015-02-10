@@ -3,7 +3,7 @@
 ../story/index.htm?../myStories/exprWeek02b.txt                   Week  2 - Master Page
 ../story/index.htm?../myStories/exprWeek03.txt                    Week  3 - Bootstrap
 ../story/index.htm?../myStories/exprWeek04a.txt                   Week  4 - jQuery Versions
-../story/index.htm?../myStories/exprWeek04b.txt                   Week  4
+../story/index.htm?../myStories/exprWeek04b.txt                   Week  4 - Page Cache
 ../story/index.htm?../myStories/exprWeek05.txt                    Week  5
 ../story/index.htm?../myStories/exprWeek06.txt                    Week  6
 ../story/index.htm?../myStories/exprWeek07.txt                    Week  7
