@@ -31,13 +31,13 @@
             }
 
         a {
-            color: royalblue;
+            color: darkblue;
             font-weight: bold;
             text-decoration: none;
         }
 
             a:visited {
-                color: lightblue;
+                color: blue;
             }
 
             a:hover {
@@ -59,6 +59,19 @@
 
         .pad {
             padding: 10px;
+        }
+
+        .tc2 {
+            width: 50%;
+        }
+
+        .tc3 {
+            width: 33.3333%;
+            text-align: center;
+        }
+
+        .box {
+            text-align: center;
         }
     </style>
 
@@ -101,12 +114,22 @@
 
                 <%--                <a href="myTests/Week02/MasterPage/Default.aspx">First Test</a>
                 <br />--%>
-                <a href="story/index.htm?../myStories/experiments.txt" target="_blank">Experiments</a>
-                <hr />
-                <img alt="" src="myImage/myPicture.jpg" />
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="tc3">
+                                <a href="story/index.htm?../myStories/experiments.txt" target="_blank">Experiments</a>
+                        </td>
+                        <td class="tc3">
+                            <img alt="" src="myImage/myPicture.jpg" />
+                            &nbsp;</td>
+                        <td class="tc3">
+                                <a href="https://github.com/MichaelBarb/CS5610-barbm.git" target="_blank">Web Site Github</a>
+                        </td>
+                    </tr>
+                </table>
                 <hr />
                 <p>
-                    <b>Not much work has been done on the home page yet.  Mostly at this point is is just to meet first week minimum requirements.</b>
+                    <b>Not much work has been done on the home page yet.  Mostly at this point it is just to meet the first few weeks minimum requirements.</b>
                 </p>
                 <hr />
                 <br />
