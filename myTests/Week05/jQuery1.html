@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Experiment 1</title>
+    <!--<link href="../../myCSS/html5reset-1.6.1.css" rel="stylesheet" />-->
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-ui-1.11.3/jquery-ui.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../Scripts/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+    <!--<link href="../../Scripts/jquery-ui-1.11.3/jquery-ui.theme.css" rel="stylesheet" />-->
+
+    <script>
+        $(function () {
+            $("button:first").button({
+                icons: {
+                    primary: "ui-icon-locked"
+                },
+                text: false
+            })
+                .next().button({
+                    icons: {
+                        primary: "ui-icon-locked"
+                    }
+                })
+                .next().button({
+                    icons: {
+                        primary: "ui-icon-gear",
+                        secondary: "ui-icon-triangle-1-s"
+                    }
+                })
+                .next().button({
+                    icons: {
+                        primary: "ui-icon-gear",
+                        secondary: "ui-icon-triangle-1-s"
+                    },
+                    text: false
+                });
+        });
+    </script>
+</head>
+<body style="margin: 1em">
+    <div>
+        <h1>jQuery UI</h1>
+        <h4>Experiment 1:  Setup jQuery UI</h4>
+        <h4>Experiment 2:  Link Files to show Icons</h4>
+        <h4>Experiment 3:  Make different kind of buttons with Icons</h4>
+    </div>
+    <hr />
+    <div>
+        <h3>Summary</h3>
+        <h4>Experiment 1:  Setup jQuery UI</h4>
+        <p>
+            To setup jQuery UI requires downloading both jQuery and jQuery UI.  Links were put in the header.
+        </p>
+        <h4>Experiment 2:  Link Files to show Icons</h4>
+        <p>
+            I first tied some buttons with Icons.  I tried the Button Demo on the jQuery UI web
+            site.  I could get the buttons to work with their different formatting but could the
+            icons to display.  Tracing it back I found that they save all there buttons in a
+            single file.  There are several of these files depending on what color the icon is
+            to be.  The then extract an area of this file for each icon.  It probably makes
+            download faster but Visual Studio complains that it is slow.
+        </p>
+        <h5>Example of Icon File</h5>
+        <p>
+            <img src="../../Scripts/jquery-ui-1.11.3/images/ui-icons_2e83ff_256x240.png" />
+        </p><p>
+            It is also picky about where the images are located.  The file “jquery-ui.css” expects
+            to find a sub-folder located in the same folder it is located in called icons.  This
+            relationship is not documented and took considerable time to figure out.
+        </p>
+        <p>
+            To find the icon you want to use can be difficult.  I found a web page “Find the jQuery
+            UI you want” which nicely organizes them and makes them more searchable.
+        </p>
+        <h4>Experiment 3:  Make different kind of buttons with Icons</h4>
+        <p>
+            I did not like the default color scheme.  I went to the jQuery and generated new scheme.
+            I started with the gallery scheme Cupertino and got rid of all the gradients and patterned
+            backgrounds. When you down load this theme you are really downloading a custom copy of
+            jQuery UI.  It modifies the images and puts all the changes in “jquery-ui.css”.  It also
+            gives you a file “jquery-ui.theme.css” with your setting in case you want to edit them further.
+        </p>
+        <h5>Header for CSS and Scripts</h5>
+        <div class="snippetBox">
+            <p class="snippetText">
+                <ul>
+                    <li>&lt;link href="../../myCSS/myTheme.css" rel="stylesheet" /></li>
+                    <li>&lt;link href="../../Scripts/jquery-ui-1.11.3/jquery-ui.min.css" rel="stylesheet" /></li>
+                    <li>&lt;script src="../../Scripts/jquery-1.11.2.min.js">&lt;/script></li>
+                    <li>&lt;script src="../../Scripts/jquery-ui-1.11.3/jquery-ui.min.js">&lt;/script></li>
+                    <li>&lt;link href="../../Scripts/jquery-ui-1.11.3/jquery-ui.theme.css" rel="stylesheet" /></li>
+                </ul>
+            </p>
+        </div>
+        <hr />
+        <div>
+            <h3>Test</h3>
+            <div>
+                <p><span class="ui-icon ui-icon-carat-1-n"></span></p>
+                <p>Name:  ui-icon-carat-1-n ; Tags: carat, angle, north, up</p>
+            </div>
+            <div title=".ui-icon-carat-1-n" class="icon">
+                <button>Button with icon only</button>
+                <button>Button with icon on the left</button>
+                <button>Button with two icons</button>
+                <button>Button with two icons and no text</button>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <h3>Source Code </h3>
+            <a href="../../fileview/Default.aspx?~/myTests/Week05/jQuery1.html" target="_blank">View Source: Page</a>
+            <br />
+            <a href="../../fileview/Default.aspx?~/myCSS/myTheme.css" target="_blank">View Source: myTheme.css</a>
+            <br />
+            <a href="../../fileview/Default.aspx?~/Scripts/jquery-ui-1.11.3/jquery-ui.theme.css" target=" _blank">View Source: jquery-ui.theme.css</a>
+        </div>
+        <hr />
+        <div>
+            <h3>References</h3>
+            <a href="http://jqueryui.com/" target="_blank">jQuery UI</a>
+            <br />
+            <a href="http://jqueryui.com/button/" target="_blank">Button Demo</a>
+            <br />
+            <a href="http://jqueryui.com/themeroller/" target="_blank">Themes</a>
+            <br />
+            <a href="http://roam.be/lab/jquery-ui-icon-name-map/" target="_blank">Find the jQuery UI you want</a>
+        </div>
+        <hr />
+
+    </div>
+</body>
+</html>

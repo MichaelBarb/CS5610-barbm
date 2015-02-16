@@ -1,2 +1,2 @@
-﻿../story/whatisnext.htm?../myStories/exprWeek05.txt                Experiments Week 5
-../myTests/Week03/Bootstrap1.aspx                                  To Be Added
+﻿../story/whatisnext.htm?../myStories/exprWeek05.txt                Experiments Week 5 - jQueary UI
+../myTests/Week05/jQuery1.html                                     jQuery Setup, Icons, and Themes

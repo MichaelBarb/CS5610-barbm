@@ -1,0 +1,35 @@
+﻿<h4>jQuery UI</h4>
+
+<p>
+    I started working with jQuery UI and its formating features.  In general they are nearly as
+    nice as those in Bootstrap.  There advantage is that the page loads much faster.
+</p>
+<p>
+    I first tied some buttons with Icons.  I tried the Button Demo on the jQuery UI web site.
+    I could get the buttons to work with their different formatting but could the icons to display.
+    Tracing it back I found that they save all there buttons in a single file.  There are several
+    of these files depending on what color the icon is to be.  The then extract an area of this
+    file for each icon.  It probably makes download faster but Visual Studio complains that it is slow.
+</p>
+<p>
+    It is also picky about where the images are located.  The file “jquery-ui.css” expects to
+    find a sub-folder located in the same folder it is located in called icons.  This relationship
+    is not documented and took considerable time to figure out.
+</p>
+<p>
+    To find the icon you want to use can be difficult.  I found a web page “Find the jQuery UI
+    you want” which nicely organizes them and makes them more searchable.
+</p>
+<p>
+    I did not like the default color scheme.  I went to the jQuery and generated new scheme.
+    I started with the gallery scheme Cupertino and got rid of all the gradients and patterned
+    backgrounds. When you down load this theme you are really downloading a custom copy of
+    jQuery UI.  It modifies the images and puts all the changes in “jquery-ui.css”.  It also gives
+    you a file “jquery-ui.theme.css” with your setting in case you want to edit them further.
+</p>
+<p>
+    To see the solution that I ended up with see the experiment:
+    <a href="../myTests/Week05/jQuery1.html">../myTests/Week05/jQuery1.html</a>
+</p>
+
+<hr />
