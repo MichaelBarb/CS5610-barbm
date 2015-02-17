@@ -23,6 +23,9 @@ ol {
     border: solid 3px black;
     margin: 20px 50px;
     background-color: #d0e0ff;
+    max-width: 800px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .snippetText {
@@ -37,4 +40,8 @@ ol {
 
 .Indent2 {
     margin: 40px;
+}
+
+.titleCenter {
+    text-align: center;
 }
