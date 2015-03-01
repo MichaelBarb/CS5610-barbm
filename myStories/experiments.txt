@@ -5,7 +5,7 @@
 ../story/index.htm?../myStories/exprWeek04a.txt                   Week  4 - jQuery Versions
 ../story/index.htm?../myStories/exprWeek04b.txt                   Week  4 - Page Cache
 ../story/index.htm?../myStories/exprWeek05.txt                    Week  5 - jQuery UI
-../story/index.htm?../myStories/exprWeek06.txt                    Week  6
+../story/index.htm?../myStories/exprWeek06.txt                    Week  6 - Code Behind
 ../story/index.htm?../myStories/exprWeek07.txt                    Week  7
 ../story/index.htm?../myStories/exprWeek08.txt                    Week  8
 ../story/index.htm?../myStories/exprWeek09.txt                    Week  9
