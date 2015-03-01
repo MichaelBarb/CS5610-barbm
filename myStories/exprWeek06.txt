@@ -1,2 +1,3 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek06.txt                Experiments Week 6
 ../myTests/Week06/CodeBehind.aspx                                  Code Behind (Experiments 1 - 5)
+../myTests/Week06/CodeBehind2.aspx                                 Code Behind (extra Validation Experiments)
