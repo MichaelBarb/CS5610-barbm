@@ -14,10 +14,21 @@ public partial class myTests_Week06_Default : System.Web.UI.Page
 
     protected void btnCalculate_Command(object sender, CommandEventArgs e)
     {
-        decimal Input1Number = Decimal.Parse(Input1.Value);
-        decimal Input2Number = Decimal.Parse(Input2.Value);
+        decimal Input1Number = 0;
+        decimal Input2Number = 0;
 
-        decimal ResultNumber = Input1Number + Input2Number;
-        Result.Text = ResultNumber.ToString();
+        try
+        {
+            Input1Number = Decimal.Parse(Input1.Value);
+            Input2Number = Decimal.Parse(Input2.Value);
+
+            decimal ResultNumber = Input1Number + Input2Number;
+            Result.Text = ResultNumber.ToString();
+        }
+        catch //(Exception error)
+        {
+            Result.Text = "Invalid Data Entry";  //   Exception=" + error;
+        }
+
     }
 }

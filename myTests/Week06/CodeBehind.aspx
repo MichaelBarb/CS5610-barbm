@@ -40,17 +40,17 @@
             <h3>Test</h3>
             <p>
                 <input id="Input1" type="text" runat="server" />
-                <asp:CompareValidator ID="cv" runat="server"
+                <%--<asp:CompareValidator ID="cv" runat="server"
                     ControlToValidate="Input1" Type="Integer"
                     Operator="DataTypeCheck"
-                    ErrorMessage="Value must be an integer!" />
+                    ErrorMessage="Value must be an integer!" />--%>
             </p>
             <p>
                 <input id="Input2" type="text" runat="server" />
-                <asp:CompareValidator ID="CompareValidator2" runat="server"
+                <%--<asp:CompareValidator ID="CompareValidator2" runat="server"
                     ControlToValidate="Input2" Type="Integer"
                     Operator="DataTypeCheck"
-                    ErrorMessage="Value must be an integer!" />
+                    ErrorMessage="Value must be an integer!" />--%>
             </p>
             <p>
                 <asp:Button ID="btnCalculate" runat="server" Text="Calculate" OnCommand="btnCalculate_Command" />
@@ -118,7 +118,12 @@
             <h4 id="Exp5">Experiment 4:&nbsp;&nbsp; Validated Input</h4>
             <p>
                 This experiment added validation to the input fields.&nbsp; 
-                It checked to insure an integer was input.&nbsp; Without valdation entry of a none number would crash the server.&nbsp; Also of interest is that when a field is not valid it disables the &quot;Calculate&quot; button so it cannot even display an error message.</p>
+                It checked to insure an integer was input.&nbsp; Without valdation entry of a none number would crash the server.&nbsp; Also of interest is that when a field is not valid it disables the &quot;Calculate&quot; button so it cannot even display an error message.
+            </p>
+            <p>
+                ASP validation did not work on the schools server.  It id work OK localy.
+                I had to add Validation to the code behind to prevent the page from crashsing.
+            </p>
         </div>
         <div class="snippetBox">
             <ul class="snippetText">
