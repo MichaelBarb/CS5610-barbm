@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home Page With Bootstrap</title>
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand text-muted" href="#">Toko</a>-->
+            <a class="navbar-brand" href="#" style="padding-top:0">
+                <img src="../../myImage/myPicture.jpg" alt="" style="width:42px;height:51px" />
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li class="active"><a href="#">Home</a></li>-->
+                    <!--<li><a href="#">About</a></li>-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" data-target="#">Metrics<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../sitestatistics/default.aspx" target="_blank">SiteStatistics</a></li>
+                            <li><a href="../../statistics/default.aspx" target="_blank">Statistics</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" data-target="#">Utilities<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../source/default.aspx" target="_blank">Source</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../../search/default.aspx" target="_blank">Search</a></li>
+                            <li><a href="../../searchtree/default.aspx" target="_blank">SearchTree</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../../textview/default.aspx" target="_blank">TextView</a></li>
+                            <li><a href="../../filelist.aspx" target="_blank">FileList</a></li>
+                            <li><a href="../../autofile.aspx" target="_blank">AutoFile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../../images/autoimage.aspx" target="_blank">Images</a></li>
+                        </ul>
+                    </li>
+                    <!--<li><a href="#textModal" data-toggle="modal" data-target="#textModal">Sign Up</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide jumbotron">
+        <div class="container">
+            <ol class="carousel-indicators">
+                <li class="active " data-target="#myCarousel" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <h1>CS5610 Web Developement</h1>
+                    <p class="lead">
+                        Northeastern Univeristy
+                    </p>
+                    <p class="lead">
+                        Professor: Jose Annunziato (My Section)
+                    </p>
+                    <p class="lead">
+                        Professor: Richard Rasala (Other Section)
+                    </p>
+                    <!--<p class="btn-group">
+                        <a class="btn btn-success btn-lg" href="#">Download the app!</a>
+                        <a class="btn btn-default btn-lg" href="#">Buy the book at Amazon!</a>
+                    </p>-->
+                </div>
+                <div class="item">
+                    <h1>Michael Barb</h1>
+                    <p class="lead">Master's Science Computer Science Candidate</p>
+                    <p class="lead">&nbsp;</p>
+                    <p class="lead">&nbsp;</p>
+                    <!--<p>
+                        <a class="btn btn-success btn-lg" href="#">Buy the book at Amazon!</a>
+                    </p>-->
+                </div>
+                <div class="item">
+                    <h1>Class Web Site Spring 2015</h1>
+                    <p class="lead">Other Candidates and Learning Aids</p>
+                    <p>
+                        <a class="btn btn-success btn-lg" href="http://net4.ccs.neu.edu/home/rasala/2015Spring/">Go To Site</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+    <!-- End Carousel -->
+    <!-- Modal -->
+    <div class="modal fade" id="textModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">Sign up</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="story/index.htm?../myStories/experiments.txt" target="_blank">
+                    <h2>
+                        <b class="glyphicon glyphicon-fire"></b>
+                        Experiments
+                    </h2>
+                </a>
+                <p>Demonstations of experiments preformed to learn different principles.</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="blog/" target="_blank">
+                    <h2>
+                        <b class="glyphicon glyphicon-pencil"></b>
+                        Blog
+                    </h2>
+                </a>
+                <p>The story of how and what I learned.</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" target="_blank">
+                    <h2>
+                        <b class="glyphicon glyphicon-briefcase"></b>
+                        Project
+                    </h2>
+                </a>
+                <p>The final project for the course utilizing .NET .ASP and SQL Server</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6 hidden-xs">
+            </div>
+            <div class="col-sm-6">
+                <a href="https://github.com/MichaelBarb/CS5610-barbm.git" target="_blank">
+                    <h3>
+                        <img src="../../myImage/GitHub-Mark.png" style="height:30px;width:30px" align="middle" />
+                        Github
+                    </h3>
+                </a>
+                <p>The source for this website is available on Github.</p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p>&copy; 2015 Michael Barb, MSCS, Northeastern Univ.</p>
+        </div>
+        <hr style="color:black;border-width:10px">
+
+        <!-- Experiment Page -->
+        <div>
+            <h1>Home Page with Bootstrap</h1>
+            <a href="#Exp1"><h4>Experiment 1:&nbsp;&nbsp; Setup Full Featured Responsive Web Page</h4></a>
+            <a href="#Exp2"><h4>Experiment 2:&nbsp;&nbsp; Put Picture in Navbar</h4></a>
+            <a href="#Exp3"><h4>Experiment 3:&nbsp;&nbsp; Put Metric links in Pull-Down Menu</h4></a>
+            <a href="#Exp4"><h4>Experiment 4:&nbsp;&nbsp; Edited Carousel</h4></a>
+            <a href="#Exp5"><h4>Experiment 5:&nbsp;&nbsp; Add Major Links</h4></a>
+        </div>
+        <hr />
+        <div>
+            <h3>Test</h3>
+            <p>The test is above the wide line.</p>
+        </div>
+        <hr />
+        <h3>Summary</h3>
+        <div>
+            <div>
+                <h4 id="Exp1">Experiment 1:&nbsp;&nbsp; Setup Full Featured Responsive Web Page</h4>
+                <p>
+                    In previous experiments I had tried several things to build a good home page.  I could never get a
+                    look and feel that looked professional.  In particular I found js-ui very disappointing.  Bootstrap was able to
+                    give me the look I was after so I am trying an experiment to see how it will work.
+                </p>
+                <p>
+                    I started with the example from the Kindle book referenced.  I set it up in my website with
+                    all the appropriate paths to css and js files.  I started refactoring it for use as a new
+                    home page for this site.
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h4 id="Exp2">Experiment 2:&nbsp;&nbsp; Put Picture in Navbar</h4>
+                <p>
+                    One of the first things I needed was to put my picture in the navbar.  Putting the
+                    picture in was easy but getting it to fit properly was not.  After several tries I
+                    found the solution was much easier than originally attempted.
+                </p>
+                <p>
+                    Sizing was not that hard.  I found references that said that using the attributes
+                    in image for height and width can be over ridden by css styles.  They recommend
+                    putting these settings in “style” so they cannot be overridden.
+                </p>
+                <p>
+                    For proper positioning I found default padding was preventing it from being properly
+                    placed.  I had to reset the padding-top to zero.
+                </p>
+                <p>The following code snippet is the final result:</p>
+                <div class="snippetBox">
+                    <ul class="snippetText">
+                        <li>&lt;a class="navbar-brand" href="#" style="padding-top:0"> </li>
+                        <li>&nbsp; &nbsp; &lt;img src="../../myImage/myPicture.jpg" alt="" style="width:42px;height:51px" /></li>
+                        <li>&lt;/a></li>
+                    </ul>
+                </div>
+                <p>
+                    In the process I learned a lot about Bootstrap navbar and the mny parts of it.  The next experiment also involves the navbar.
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h4 id="Exp3">Experiment 3:&nbsp;&nbsp; Put Metric links in Pull-Down Menu</h4>
+                <p>
+                    There are many metrics and utilities that are to be available from the home page. I put these in pull downs in the navbar.
+                    I found using Bootstrap this was a fairly easy task.
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h4 id="Exp4">Experiment 4:&nbsp;&nbsp; Edited Carousel</h4>
+                <p>
+                    One thing I not like about it is the change in height from image to image.  You can fix the height but then you lose its
+                    responsive nature.  I tried several things but could not get it behave properly.  Some help on the web suggested you need
+                    to do an override in JavaScript.  I will tackle this later but by itself it will be a major investment of time.
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h4 id="Exp5">Experiment 5:&nbsp;&nbsp; Add Major Links</h4>
+                <p>
+                    Using Bootstraps grid I set up 3 cells for the other major links in this site.  They are Experiments, Blog, and Project.
+                </p>
+                <p>
+                    I put an icon in the link / title of each.  This system use a custom font and is much better than the icon system in
+                    js-ui.  The fonts are vector drawings and scale nicely.  In js-ui is has a single large png file with all icons and
+                    then masks all but the desired one.  Since they are bitmaps they do not scale well and are difficult to change colors.
+                </p>
+                <p>
+                    Also doing each one of the major links as a cell allowed me to put a short explanation below each link.
+                </p>
+                <p>
+                    Below the 3 cells of the major links I also but in a 2 cell row for a link to Github.  I could only get this
+                    icon as bit map and its color does not match well.  I do not have the tools to manipulate the color of a svg file.
+                </p>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <h3>Source Code </h3>
+            <a href="../../fileview/Default.aspx?~/myTests/Week07/Home.html" target="_blank">View Source: Home.html</a>
+        </div>
+        <hr />
+        <div>
+            <h3>References</h3>
+            <a href="http://www.amazon.com/Getting-Started-Bootstrap-Code-Playground-ebook/dp/B00J6N75ZA/ref=sr_1_1?ie=UTF8&qid=1425848063&sr=8-1&keywords=bootstrap+getting+started" target="_blank">
+                Bootstrap 3.3 Getting Started
+            </a>
+            <p>
+                This $2.99 Kindle only book.  It is typical of this kind of book.  They are fairly short, targeted to a
+                single narrow topic and built on a single example.  This particlar one was done much better than most.
+            </p>
+            <a href="http://www.w3schools.com/bootstrap/default.asp">w3schools.com/bootstrap</a>
+            <p>I continue to find this to be one of the best online references for many web technologies.</p>
+        </div>
+        <hr />
+    </div>
+    <!--<script src="http://code.jquery.com/jquery.js"></script>-->
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
