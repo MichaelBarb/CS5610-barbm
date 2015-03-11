@@ -268,7 +268,57 @@
                     below it.  To get everything in I had to build a nested grid.  See the following picture on how the nested grid was
                     arranged.
                 </p>
-                <img src="../../myImage/NestedGrid.svg" class="img-responsive center-block" width="310" height="110" />
+                <!--<img src="../../myImage/NestedGrid.svg" class="img-responsive center-block" width="310" height="110" />-->
+                <svg class="center-block" width="600" height="200">
+                    <g>
+                        <rect style="fill:none;stroke:#000000;stroke-width:4"
+                              width="600"
+                              height="200"
+                              x="0"
+                              y="0" />
+                        <rect style="fill:none;stroke:#000000;stroke-width:3"
+                              width="130"
+                              height="180"
+                              x="10"
+                              y="10" />
+                        <rect style="fill:none;stroke:#000000;stroke-width:3"
+                              width="440"
+                              height="180"
+                              x="150"
+                              y="10" />
+                        <rect style="fill:none;stroke:#000000;stroke-width:3"
+                              width="205"
+                              height="90"
+                              x="160"
+                              y="90" />
+                        <rect style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                              width="205"
+                              height="90"
+                              x="375"
+                              y="90" />
+                        <text style="font-size:40px;font-family:sans-serif"
+                              x="60"
+                              y="110">
+                            3
+                        </text>
+                        <text style="font-size:40px;font-family:sans-serif"
+                              x="360"
+                              y="60">
+                            9
+                        </text>
+                        <text style="font-size:40px;font-family:sans-serif"
+                              x="470"
+                              y="150">
+                            4
+                        </text>
+                        <text style="font-size:40px;font-family:sans-serif"
+                              x="250"
+                              y="150">
+                            4
+                        </text>
+                    </g>
+                </svg>
+
                 <p>The following code snippet is the final result:</p>
                 <div class="snippetBox">
                     <ul class="snippetText">
@@ -352,6 +402,11 @@
                         <li>&nbsp; &nbsp; width="310" height="110" /></li>
                     </ul>
                 </div>
+                <p>
+                    <b>UPDATE: </b> It seems our file serve will not serve svg image files.  I hard coded the diagram in the page.
+                    When doing this the diagram is no longer responsive.  If I am able to get our server to updated I
+                    will revert back to the svg image.
+                </p>
                 <p>
                     In the previous set of experiments HTML help from w3schools they recommended against
                     doing the width and height the way I have it above.  They recommend using styles for this.
