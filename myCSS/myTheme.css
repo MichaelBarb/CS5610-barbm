@@ -45,3 +45,10 @@ ol {
 .titleCenter {
     text-align: center;
 }
+
+.carousel-indicators li {
+  border-color:slategray;
+}
+.carousel-indicators .active {
+  background-color: slategray;
+}
