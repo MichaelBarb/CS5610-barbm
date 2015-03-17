@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SVG File vs. Embedded</title>
+
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Experiment Page -->
+        <div id="Experiments">
+            <h1>SVG File vs. Embedded</h1>
+        </div>
+        <div>
+
+            <h4 id="Exp1">Experiment 1:&nbsp;&nbsp; Carousel - Add Picture</h4>
+            <p>
+                Following are 2 versions of the same diagram.
+            </p>
+            <p>
+                The frirst version is from an SVG file.  This file was drawn in InkScape.  Following it is the code that loads
+                the file.  Notice that is scales the picture down, centers it, and makes the image responsive.
+            </p>
+            <p>
+                Note that as the window is narrowered the diagram becomes smaller.
+            </p>
+            <img src="../../myImage/NestedGrid.svg" class="img-responsive center-block" width="310" height="110" />
+            <h5 class="titleCenter">SVG File</h5>
+            <br />
+            <div class="snippetBox">
+                <ul class="snippetText">
+                    <li>&lt;img src="../../myImage/NestedGrid.svg"</li>
+                    <li>&nbsp; &nbsp; class="img-responsive center-block"</li>
+                    <li>&nbsp; &nbsp; width="310" height="110" /></li>
+                </ul>
+            </div>
+            <h5 class="titleCenter">ImSVG File Code</h5>
+            <br />
+            <br />
+            <p>
+                This version was done as embeded SVG in the HTML file.  I started with the file developed in InkScape
+                and opened it in a Notepad.  I then took the text from this file and put it in the HTML page.  After I had
+                it in the HTML editor I reduce many of the settings and let the rectangles and text use the defaults.  It
+                is still a lot of code and you can see the source for it in the link below.
+            </p>
+            <p>
+                Note that as the window is narrowered the diagram remains the same dimensions and forces a horizontal scroll bar..
+            </p>
+            <svg class="center-block" width="600" height="200">
+                <g>
+                    <rect style="fill:none;stroke:#000000;stroke-width:4"
+                          width="600"
+                          height="200"
+                          x="0"
+                          y="0" />
+                    <rect style="fill:none;stroke:#000000;stroke-width:3"
+                          width="130"
+                          height="180"
+                          x="10"
+                          y="10" />
+                    <rect style="fill:none;stroke:#000000;stroke-width:3"
+                          width="440"
+                          height="180"
+                          x="150"
+                          y="10" />
+                    <rect style="fill:none;stroke:#000000;stroke-width:3"
+                          width="205"
+                          height="90"
+                          x="160"
+                          y="90" />
+                    <rect style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                          width="205"
+                          height="90"
+                          x="375"
+                          y="90" />
+                    <text style="font-size:40px;font-family:sans-serif"
+                          x="60"
+                          y="110">
+                        3
+                    </text>
+                    <text style="font-size:40px;font-family:sans-serif"
+                          x="360"
+                          y="60">
+                        9
+                    </text>
+                    <text style="font-size:40px;font-family:sans-serif"
+                          x="470"
+                          y="150">
+                        4
+                    </text>
+                    <text style="font-size:40px;font-family:sans-serif"
+                          x="250"
+                          y="150">
+                        4
+                    </text>
+                </g>
+            </svg>
+            <h5 class="titleCenter">SVG Embeded</h5>
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <div>
+            <h3>Source Code </h3>
+            <a href="../../fileview/Default.aspx?~/myTests/Week09/Home.html" target="_blank">View Source: Home.html</a>
+            <br />
+        </div>
+        <hr />
+        <div>
+            <h3>References</h3>
+            <a href="http://www.w3schools.com/bootstrap/default.asp">w3schools.com/bootstrap</a>
+            <p>
+                I continue to find this to be one of the best online references for many web technologies.
+            </p>
+            <a href="https://inkscape.org/en/">Inkscape.org</a>
+            <p>
+                An open source program that lets you draw svg files.  It looks like a well done graphics program.  I barely used any of it
+                capabilities but plan on learning more of it.
+            </p>
+
+        </div>
+        <hr />
+    </div>
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

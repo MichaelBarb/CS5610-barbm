@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Panel and Well</title>
+
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <!-- Experiment Page -->
+        <div id="Experiments">
+            <h1>BootStrap Panel and Well vs. myTheme SnippetBox</h1>
+            <a href="#Exp2">
+                <h4>Experiment 2: &nbsp; BootStrap Panel and Well</h4>
+            </a>
+            <a href="#Exp3">
+                <h4>Experiment 3: &nbsp; Update my CSS SnippetBox</h4>
+            </a>
+            <hr />
+        </div>
+        <div>
+            <h4>Tests</h4>
+            <br />
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="panel panel-info ">
+                        <div class="panel-heading">
+                            <ul class="snippetText">
+                                <li>Panel heading without title</li>
+                                <li>In BootStrap Grid</li>
+                                <li>Line 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="well">
+                        <ul class="snippetText">
+                            <li>Well Defaults</li>
+                            <li>In BootStrap Grid</li>
+                            <li>Line 3</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="well-sm sinppetWell">
+                        <ul>
+                            <li>Well Styled</li>
+                            <li>In BootStrap Grid</li>
+                            <li>Line 3</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+            <div class="snippetBox">
+                <ul class="snippetText">
+                    <li>Orginal Snippet Box</li>
+                    <li>Line 2</li>
+                    <li>Line 3</li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>SnippetBox 2</li>
+                            <li>In BootStrap Grid</li>
+                            <li>Line 3</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <div>
+            <h4 id="Exp2">Experiment 2: &nbsp; BootStrap Panel and Well</h4>
+            <p>
+                In reading about Bootstrap I noticed they had sytles Panel and Grid.  For my code snippet box I wondered if I could have
+                cleaner code using one of them.
+            </p>
+            <p>
+                I also wanted a better responsive result.  I used Bootstraps grid for this.
+            </p>
+            <p>
+                Panel is really intended to be a two part box.  See example below.  I could force it to be a single part part.  I could
+                force it to be a single color but it still reqired overrides on the ul text.  Panel also has some neat ways to hide the
+                panel content but for this application it is not needed.
+            </p>
+            <div class="panel panel-info ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Info With Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <p>
+                Well is suppose to provide a 3D inset look.  I found its default colors and shape do not really work for this.  In other
+                programs I have worked with the effect was much better.
+            </p>
+            <p>
+                I was able to develope a style that would override most default settings and give me the look I wanted.  Using Well did
+                not really gain anything.  It required styling also most the same as what I had done before and just added a CSS style
+                that was mostly overridden.
+            </p>
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <div>
+            <h4 id="Exp3">Experiment 3: &nbsp; Update myCSS snippetBox</h4>
+            <p>
+                Experimenting with styles for for the Well made realize I could do a much better job on my previous style.  I used a
+                combinator style so once I set the style for the division it set the text style for the "ul" inside it.
+            </p>
+            <p>
+                The thing that made the responsive behavior better was putting the snippet box in a grid and getting rid of a lot of
+                padding in the style.  I used a small grid that was 1, 10, 1. This made the empth cells on each end dissappear at 750px.
+                It also made nice consistant bumps in cell size as the width changed.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>.snippetBox2 {</li>
+                            <li> &nbsp; &nbsp; padding: 10px;</li>
+                            <li> &nbsp; &nbsp; border: solid 3px black;</li>
+                            <li> &nbsp; &nbsp; background-color: #d0e0ff;</li>
+                            <li> &nbsp; &nbsp; margin-left: auto;</li>
+                            <li> &nbsp; &nbsp; margin-right: auto;</li>
+                            <li>}</li>
+                            <li>.snippetBox2 ul {</li>
+                            <li> &nbsp; &nbsp; font-family: monospace;</li>
+                            <li> &nbsp; &nbsp; font-size: 80%;</li>
+                            <li> &nbsp; &nbsp; margin: 2px;</li>
+                            <li>}</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <h5 class="titleCenter">New Snippet Box CSS Style</h5>
+           <br />
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>&lt;div class="row"></li>
+                            <li> &nbsp; &nbsp; &lt;div class="col-sm-1">&lt;/div></li>
+                            <li> &nbsp; &nbsp; &lt;div class="col-sm-10"></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="snippetBox2"></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li>SnippetBox 2&lt;/li></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li>In BootStrap Grid&lt;/li></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li>Line 3&lt;/li></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div></li>
+                            <li> &nbsp; &nbsp; &lt;/div></li>
+                            <li> &nbsp; &nbsp; &lt;div class="col-sm-1">&lt;/div></li>
+                            <li>  &lt;/div></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <h5 class="titleCenter">New Snippet Box HTML</h5>
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+
+        <hr />
+        <div>
+            <h3>Source Code </h3>
+            <a href="../../fileview/Default.aspx?~/myTests/Week09/PanelAndWell.html" target="_blank">View Source: Home.html</a>
+            <br />
+            <a href="../../fileview/Default.aspx?~/myCSS/myTheme.css" target="_blank">View Source: myTheme.css</a>
+        </div>
+        <hr />
+        <div>
+            <h3>References</h3>
+            <a href="http://www.w3schools.com/bootstrap/default.asp">w3schools.com/bootstrap</a>
+            <p>
+                I continue to find this to be one of the best online references for many web technologies.
+            </p>
+        </div>
+        <hr />
+    </div>
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

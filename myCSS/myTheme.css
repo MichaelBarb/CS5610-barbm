@@ -24,14 +24,41 @@ ol {
     margin: 20px 50px;
     background-color: #d0e0ff;
     max-width: 800px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 .snippetText {
     font-family: monospace;
     font-size: 80%;
     margin: 2px;
+}
+
+
+.snippetBox2 {
+    padding: 10px;
+    border: solid 3px black;
+    background-color: #d0e0ff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.snippetBox2 ul {
+    font-family: monospace;
+    font-size: 80%;
+    margin: 2px;
+}
+
+
+
+.sinppetWell {
+    color: black;
+    background: #d0e0ff;
+    border: solid 3px black;
+    border-radius: 0;
+    font-family:monospace;
+    font-size:80%;
+}
+.sinppetWell ul{
+    margin-bottom:0;
 }
 
 .Indent1 {
@@ -47,8 +74,9 @@ ol {
 }
 
 .carousel-indicators li {
-  border-color:slategray;
+    border-color: slategray;
 }
+
 .carousel-indicators .active {
-  background-color: slategray;
+    background-color: slategray;
 }

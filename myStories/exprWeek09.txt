@@ -1,2 +1,3 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek09.txt                Experiments Week 9
-../myTests/Week03/Bootstrap1.aspx                                  To Be Added
+../myTests/Week09/SVG.html										   SVG Images (Experiment 1)
+../myTests/Week09/PanelAndWell.html                                Bootstrap Panel and Well vs. myTheme SnippetBox (Experiment 2 & 3)
