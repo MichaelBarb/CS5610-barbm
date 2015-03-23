@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        body, html {
+            background-color: #000;
+            color: white;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+
+        #pause:checked ~ div:hover,
+        #pause:checked ~ div div:hover {
+            animation-play-state: paused !important;
+            background: rgba(0, 153, 153, 0.7);
+            box-shadow: 0 0 1px 5px rgba(77, 255, 255, 0.9), 0 0 5px 7px black;
+        }
+
+        #init:active ~ .root,
+        #init:active ~ .root div {
+            animation-play-state: paused !important;
+            animation: none !important;
+            transition: transform .5s ease-out;
+            background: rgba(153, 0, 77, 0.7);
+            box-shadow: 0 0 1px 5px rgba(255, 77, 166, 0.9), 0 0 5px 7px black;
+        }
+
+        div {
+            background: rgba(38, 0, 153, 0.7);
+            border-radius: 100px;
+            box-shadow: 0 0 1px 5px rgba(121, 77, 255, 0.9), 0 0 5px 7px black;
+            width: 100px;
+            height: 14px;
+            position: absolute;
+            margin-left: -14px;
+            animation-name: rot;
+            animation-duration: 20s;
+            animation-delay: .5s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            transform-origin: 7px 7px;
+            animation-timing-function: linear;
+            animation-play-state: running !important;
+            transition: background-color 3s, box-shadow 0.3s;
+        }
+
+            div.root {
+                top: 50%;
+                left: 50%;
+            }
+
+            div > div {
+                top: 0;
+                left: 100%;
+                width: 90%;
+                animation-duration: calc(inherit / 2);
+                /* don't works :( */
+            }
+
+            div:before {
+                content: '';
+                display: block;
+                width: 7px;
+                height: 7px;
+                background: white;
+                overflow: hidden;
+                position: absolute;
+                top: 3.5px;
+                border-radius: 100%;
+            }
+
+            div:before {
+                left: 3.5px;
+            }
+
+            div:empty:after {
+                right: 3.5px;
+            }
+
+        @keyframes rot {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            50.0001% {
+                transform: rotate(-180deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nested divs animated by CSS</h1>
+    <input id="pause" type="checkbox" checked="checked" />
+    <label for="pause">Pause on hover</label><br />
+    <input type="button" value="init" id="init" />
+    <div class="root">
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

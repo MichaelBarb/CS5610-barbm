@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     id="SVG_Box"
+     width="230px"
+     height="26px">
+    <g id="layer1">
+        <text id="text1"
+              x="0" y="25"
+              style="font-family:Verdana; font-size:24pt">
+            It's SVG CSS!
+        </text>
+
+    </g>
+</svg>

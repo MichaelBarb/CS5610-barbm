@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../../Scripts/smil.user.js"></script>
+    <style>
+        .myBox {
+            position: relative;
+            -webkit-animation: myBoxAnimate 8s forwards;
+            animation: myBoxAnimate 8s forwards;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myBoxAnimate {
+            from {
+                top: 100px;
+                right: -250px;
+                width: 300px;
+                height: 100px;
+                fill: lime;
+            }
+
+            to {
+                top: 0;
+                right: 0;
+                width: 800px;
+                height: 300px;
+                fill: red;
+            }
+        }
+        /* Standard syntax */
+        @keyframes myBoxAnimate {
+            from {
+                top: 100px;
+                right: -250px;
+                width: 300px;
+                height: 100px;
+                fill: lime;
+            }
+
+            to {
+                top: 0;
+                right: 0;
+                width: 800px;
+                height: 300px;
+                fill: red;
+            }
+        }
+
+
+        .myText {
+            position: relative;
+            -webkit-animation: myTextAnimate 8s forwards;
+            animation: myTextAnimate 8s forwards;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myTextAnimate {
+            from {
+                top: 100px;
+                right: -250px;
+                width: 300px;
+                height: 100px;
+                fill: lime;
+            }
+
+            to {
+                top: 0;
+                right: 0;
+                width: 800px;
+                height: 300px;
+                fill: red;
+            }
+        }
+        /* Standard syntax */
+        @keyframes myTextAnimate {
+            from {
+                top: 100px;
+                right: -250px;
+                width: 300px;
+                height: 100px;
+                fill: lime;
+            }
+
+            to {
+                top: 0;
+                right: 0;
+                width: 800px;
+                height: 300px;
+                fill: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><strong>Note:</strong> This example does not work in Internet Explorer and Safari.</p>
+
+    <svg width="800" height="300">
+        <rect id="rec" x="300" y="100" width="300" height="100" style="fill:lime">
+            <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="0" />
+            <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" />
+            <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" />
+            <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" />
+            <animate attributeName="fill" attributeType="CSS" begin="2s" dur="4s" fill="freeze" from="lime" to="red" />
+        </rect>
+        <g transform="translate(100,100)">
+            <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24pt; visibility:hidden">
+                It's SVG Animate!
+                <set attributeName="visibility" attributeType="CSS" begin="1s" dur="5s" fill="freeze" to="visible" />
+                <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+                <animate attributeName="fill" attributeType="CSS" begin="1s" dur="5s" fill="freeze" from="red" to="blue" />
+                <animateTransform attributeName="transform" attributeType="XML" begin="1s" dur="5s" fill="freeze" type="rotate" from="-30" to="0" />
+                <animateTransform attributeName="transform" attributeType="XML" begin="1s" dur="5s" fill="freeze" type="scale" from="1" to="2" additive="sum" />
+            </text>
+        </g>
+    </svg>
+    <br />
+    <!--<svg>-->
+        <svg class="myBox" width="300" height="100" viewBox="0 0 300 100">
+            <rect id="rec" x="0" y="0" width="300" height="100" fill="lime" />
+        </svg>
+    <!--</svg>-->
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style>
+        .myMove {
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+                transform: translate(300 -300);
+            }
+
+            50% {
+                transform: rotate(180deg);
+                transform: translate(-3000 0);
+            }
+
+            75% {
+                transform: rotate(270deg);
+                transform: translate(-300 -300);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                transform: translate(300 300);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--<div style="width:300px;height:300px">-->
+        <svg class="myMove" height="100" width="150">
+            <rect id="rec1"
+                  x="0" y="0"
+                  width="150" height="100"
+                  fill="red"
+                  stroke="lightgreen"
+                  stroke-width="5" />
+
+        </svg>
+    <!--</div>-->
+</body>
+</html>

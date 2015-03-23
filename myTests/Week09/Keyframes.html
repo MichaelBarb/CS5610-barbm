@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Keyframe Animation</title>
+
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .myMove {
+            position: relative;
+            width: 150px;
+            height: 100px;
+            left: 22px;
+            -webkit-animation: mymove 5s infinite;
+            animation: mymove 5s infinite;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes mymove {
+            0% {
+                top: 0;
+                -webkit-transform: rotate(0deg);
+            }
+
+            25% {
+                top: 200px;
+                -webkit-transform: rotate(90deg);
+            }
+
+            50% {
+                top: 125px;
+                -webkit-transform: rotate(180deg);
+            }
+
+            75% {
+                top: 50px;
+                -webkit-transform: rotate(270deg);
+            }
+
+            100% {
+                top: 0;
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes mymove {
+            0% {
+                top: 0;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                top: 200px;
+                transform: rotate(90deg);
+            }
+
+            50% {
+                top: 125px;
+                transform: rotate(180deg);
+            }
+
+            75% {
+                top: 50px;
+                transform: rotate(270deg);
+            }
+
+            100% {
+                top: 0;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="Experiments">
+            <h1>CSS Keyframe Animation</h1>
+            <a href="#Exp4">
+                <h4>Experiment 4: &nbsp; CSS Keyframe Animation using Explorer</h4>
+            </a>
+            <a href="#Exp5">
+                <h4>Experiment 5: &nbsp; CSS Keyframe Animation using Chrome</h4>
+            </a>
+        </div>
+        <hr />
+        <div>
+            <h4>Tests</h4>
+            <br />
+
+            <p><strong>Note:</strong> The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.</p>
+
+            <div style="height:370px; width:200px; border:3px solid red;">
+                <br />
+                <svg class="myMove">
+                    <rect id="rec1"
+                          x="0" y="0"
+                          width="150" height="100"
+                          fill="red"
+                          stroke="lightgreen"
+                          stroke-width="5" />
+                </svg>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <h4>Summary</h4>
+            <p>
+                These experiments are some of the most complicated I have done.  Doing CSS animation is not well defined by
+                standards.  By many it is considered to be an experimental standard.  Digging through the idiosyncrasies was
+                very time consuming.
+        </div>
+        <hr />
+        <div>
+            <h4 id="Exp4">Experiment 4: &nbsp; CSS Keyframe Animation using Explorer</h4>
+            <p>
+                The following snippet sets up the experiment.  I included the styles in the HTML to better illustrate the setup.
+                The "div" sets up a box that the experiment will run in.  Besides providing a pretty border is reserves the vertical
+                space for the experiment.  The object to be animated is an SVG.  I did the SVG object inline to show its simple
+                structure.  It also let me do some experimentation on SVG’s. The statement: class=”myMove” attaches the animation to the object.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>&lt;div style="height:370px; width:200px; border:3px solid red;"></li>
+                            <li> &nbsp; &nbsp; &lt;svg class="myMove"></li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;rect id="rec1"</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x="0" y="0"</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width="150" height="100"</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fill="red"</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stroke="lightgreen"</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stroke-width="5" /></li>
+                            <li> &nbsp; &nbsp; &lt;/svg></li>
+                            <li>&lt;/div></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <br />
+
+            <p>
+                Doing animation in CSS starts with a definition of the class “.myMove”.  Please note the snippet below.
+                Position is set relative so
+                all animation will occur relative to the div that it is put inside.  The width and height are set to
+                define the size of the animated object.  It is place to the left so it will bit nicely in the test box.
+                Most important is the “animation” statement.  It call the animation keyframe, sets the duration of the
+                animation to 5 seconds, and repeats the animation indefinitely.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li> &nbsp; &nbsp; .myMove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; width: 150px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; height: 100px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; left: 22px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; animation: mymove 5s infinite;</li>
+                            <li> &nbsp; &nbsp; }</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <br />
+            <p>
+                The “@keyframe: is the definition of all the frames in the animation sequence.  This sequence can be
+                divided up into steps that are percentage of the duration of the animation.  Each frame can be thought
+                of as the pose of the object being animated when at that frame.  Each property in a pose can be used in
+                CSS just set the format of a static object.  When going from frame to frame the property of the object
+                that is defined in the pose will transition smoothly from the previous pose.  In the example below I used
+                position and rotation but any property of an object can be used.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li> &nbsp; &nbsp; @keyframes mymove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(0deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 25% {top: 200px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(90deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 50% {top: 125px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(180deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 75% {top: 50px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(270deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(360deg);}</li>
+                            <li> &nbsp; &nbsp; }</li>
+                            <li>&lt;/style></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <div>
+            <h4 id="Exp5">Experiment 5: &nbsp; CSS Keyframe Animation using Chrome</h4>
+            <p>
+                This experiment plunged me into the problem of browser compatibility. WHAT A MESS. Browser vendors have been lazy and
+                do not implemented all commands themselves. They defer many of the newer commands to an alternate open source browser
+                engine.  To use these commands you have to call this alternate engine before you call the command.  This is accomplished
+                via prefixes.  For example “transition” becomes “–webkit-transition”.
+            </p>
+            <p>
+                And it gets worse. There are many alternate browser engines with many prefixes.  For absolute compatibility you need to
+                have many duplicate lines in your CSS. You have to duplicate things over and over with different prefixes.
+            </p>
+            <p>
+                Webkit is an open source web browser engine. Most of the alternate engines have died and Webkit lives on. Webkit is being
+                used more and more often. Also, more and more browsers vendors are implementing the commands so a prefix is not required.
+                Luckily providing the plain command and the one with the prefix "-webkit-" will work in 99% plus of the browsers in use
+                today. Good for compatibility, better for cleaner code but still messy.
+            </p>
+            <p>
+                When to properly use prefixes is complicated. Here is a page that gives a quick reference:
+                <a href="http://shouldiprefix.com/">http://shouldiprefix.com/</a> It is
+                not exhaustive and error free but gives a quick start on using them.
+            </p>
+            <p>
+                A better check to insure cross browser compatibility is: <a href="http://caniuse.com/">http://caniuse.com/</a> . It is a
+                much more detailed check but takes longer to read all the details.
+            </p>
+            <p>
+                In the following snippet note the addition of the line with the "-webkit-" prefix.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>&lt;style></li>
+                            <li> &nbsp; &nbsp; .myMove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; width: 150px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; height: 100px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; left: 22px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: mymove 5s infinite;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; animation: mymove 5s infinite;</li>
+                            <li> &nbsp; &nbsp; }</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <br />
+            <p>
+                Following shows the edit of the keyframe with the -webkit- prefix added as required.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li> &nbsp; &nbsp; /* Chrome, Safari, Opera */</li>
+                            <li> &nbsp; &nbsp; @-webkit-keyframes mymove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(0deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 25% {top: 200px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(90deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 50% {top: 125px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(180deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 75% {top: 50px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(270deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(360deg);}</li>
+                            <li> &nbsp; &nbsp; }</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div>
+            <h4>Conclusions</h4>
+            <p>When the pieces are put together the entire thing looks like this:</p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>&lt;style></li>
+                            <li> &nbsp; &nbsp; .myMove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; left: 22px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: mymove 5s infinite;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; animation: mymove 5s infinite;</li>
+                            <li> &nbsp; &nbsp; }</li>
+                            <li></li>
+                            <li> &nbsp; &nbsp; /* Chrome, Safari, Opera */</li>
+                            <li> &nbsp; &nbsp; @-webkit-keyframes mymove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(0deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 25% {top: 200px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(90deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 50% {top: 125px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(180deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 75% {top: 50px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(270deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: rotate(360deg);}</li>
+                            <li> &nbsp; &nbsp; }</li>
+                            <li></li>
+                            <li> &nbsp; &nbsp; /* Standard syntax */</li>
+                            <li> &nbsp; &nbsp; @keyframes mymove {</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(0deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 25% {top: 200px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(90deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 50% {top: 125px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(180deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 75% {top: 50px;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(270deg);}</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {top: 0;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: rotate(360deg);}</li>
+                            <li> &nbsp; &nbsp; }</li>
+                            <li>&lt;/style></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <div>
+            <h3>Source Code </h3>
+            <a href="../../fileview/Default.aspx?~/myTests/Week09/Keyframes.html" target="_blank">View Source: Keyframes.html</a>
+            <p>For test purposes I included the CSS in the HTML file so there is not another CSS file for this experiment.</p>
+
+        </div>
+        <hr />
+        <div>
+            <h3>References</h3>
+            <a href="http://www.w3schools.com/css/css3_animations.asp" target="_blank">http://www.w3schools.com/css/css3_animations.asp</a>
+            <p>
+                I continue to find this to be one of the best online references for many web technologies.
+                It was the starting point for my research.  It also provided the initial test that I modified
+                considerably.
+            </p>
+
+            <a href="http://shouldiprefix.com/" target="_blank">http://shouldiprefix.com/</a>
+            <p>
+                When to properly use prefixes is complicated. This page provides a quick reference.
+                It is not exhaustive and error free but gives a quick start on using them.
+                Note:  This link often does not load the first time you go to it.  I have used the page from several different directions.
+                You often have to hit the refresh button on the page.  I suspect a server problem.
+            </p>
+            <a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a>
+            <p>
+                This is a better check to insure cross browser compatibility. It is a
+                much more detailed check but takes longer to read all the details.
+            </p>
+
+
+
+
+        </div>
+        <hr />
+    </div>
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
