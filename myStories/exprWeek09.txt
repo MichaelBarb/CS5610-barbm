@@ -1,4 +1,4 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek09.txt                Experiments Week 9
-../myTests/Week09/SVG.html										   SVG Images (Experiment 1)
-../myTests/Week09/PanelAndWell.html                                Bootstrap Panel and Well vs. myTheme SnippetBox (Experiment 2 & 3)
-../myTests/Week09/Keyframes.html                                   CSS Keyframe Animation (Experiment 4 & 5)
+../myTests/Week09/SVG.html										   SVG Images                                      (Exp 9.1)
+../myTests/Week09/PanelAndWell.html                                Bootstrap Panel and Well vs. myTheme SnippetBox (Exp 9.2, 9.3)
+../myTests/Week09/Keyframes.html                                   CSS Keyframe Animation (Exp 9.4, 9.5)

@@ -1,4 +1,4 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek02a.txt               Experiments Week 2 - Page Links
-../myTests/Week02/PageLinks1Target.aspx                            PageLinks Part 1 Target Arguments
-../myTests/Week02/PageLinks2Window.aspx                            PageLinks Part 2 Another Window
-../myTests/Week02/PageLinks3SnippetBox.aspx                        PageLinks Part 3 Snippet Box
+../myTests/Week02/PageLinks1Target.aspx                            PageLinks Part 1 Target Arguments  (Exp 2.1)
+../myTests/Week02/PageLinks2Window.aspx                            PageLinks Part 2 Another Window    (Exp 2.2)
+../myTests/Week02/PageLinks3SnippetBox.aspx                        PageLinks Part 3 Snippet Box       (Exp 2.3, 2.4)

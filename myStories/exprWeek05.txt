@@ -1,4 +1,4 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek05.txt                Experiments Week 5 - jQueary UI
-../myTests/Week05/jQuery1.html                                     jQuery Setup, Icons, and Themes
-../myTests/Week05/jQuery2.html                                     jQuery Seperate Javascript file
-../myTests/Week05/jQuery3.html                                     jQuery Uniquely Tie Icons to Each Button
+../myTests/Week05/jQuery1.html                                     jQuery Setup, Icons, and Themes          (Exp 5.1, 5.2, 5.3)
+../myTests/Week05/jQuery2.html                                     jQuery Seperate Javascript file          (Exp 5.4, 5.5)
+../myTests/Week05/jQuery3.html                                     jQuery Uniquely Tie Icons to Each Button (Exp 5.6, 5.7, 5.8)

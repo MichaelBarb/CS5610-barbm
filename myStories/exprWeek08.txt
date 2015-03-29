@@ -1,2 +1,2 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek08.txt                Experiments Week 8
-../myTests/Week08/Home.html                                        Improvements to Bootstrap Home Page Experiments 1-6
+../myTests/Week08/Home.html                                        Improvements to Bootstrap Home Page (Exp 8.1 to 8.6)

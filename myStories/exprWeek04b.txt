@@ -1,2 +1,2 @@
 ﻿../story/whatisnext.htm?../myStories/exprWeek04b.txt            Experiments Week 4 - Page Cache
-../myTests/Week04/PageCache.html								Page Cache
+../myTests/Week04/PageCache.html								Page Cache (Exp 4.4, 4.5)

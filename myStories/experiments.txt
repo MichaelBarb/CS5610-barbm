@@ -1,12 +1,12 @@
 ﻿../story/whatisnext.htm?../myStories/experiments.txt              Experiments
-../story/index.htm?../myStories/exprWeek02a.txt                   Week  2 - Page Links
-../story/index.htm?../myStories/exprWeek02b.txt                   Week  2 - Master Page
-../story/index.htm?../myStories/exprWeek03.txt                    Week  3 - Bootstrap
-../story/index.htm?../myStories/exprWeek04a.txt                   Week  4 - jQuery Versions
-../story/index.htm?../myStories/exprWeek04b.txt                   Week  4 - Page Cache
-../story/index.htm?../myStories/exprWeek05.txt                    Week  5 - jQuery UI
-../story/index.htm?../myStories/exprWeek06.txt                    Week  6 - Code Behind
-../story/index.htm?../myStories/exprWeek07.txt                    Week  7 - Bootstrap Home Page
-../story/index.htm?../myStories/exprWeek08.txt                    Week  8 - Improvements to Bootstrap Home Page
-../story/index.htm?../myStories/exprWeek09.txt                    Week  9 - SVG, Snippet Box, CSS Keyframe Animation
-../story/index.htm?../myStories/exprWeek10.txt                    Week 10
+../story/index.htm?../myStories/exprWeek02a.txt                   Week  2 - Page Links                           (Exp 2.1 to 2.4)
+../story/index.htm?../myStories/exprWeek02b.txt                   Week  2 - Master Page                          (Exp 2.5)
+../story/index.htm?../myStories/exprWeek03.txt                    Week  3 - Bootstrap                            (Exp 3.1 to 3.5)
+../story/index.htm?../myStories/exprWeek04a.txt                   Week  4 - jQuery Versions                      (Exp 4.1 to 4.3)
+../story/index.htm?../myStories/exprWeek04b.txt                   Week  4 - Page Cache                           (Exp 4.4, 4.5)
+../story/index.htm?../myStories/exprWeek05.txt                    Week  5 - jQuery UI                            (Exp 5.1 to 5.8)
+../story/index.htm?../myStories/exprWeek06.txt                    Week  6 - Code Behind                          (Exp 6.1 to 6.6)
+../story/index.htm?../myStories/exprWeek07.txt                    Week  7 - Bootstrap Home Page                  (Exp 7.1 to 7.5)
+../story/index.htm?../myStories/exprWeek08.txt                    Week  8 - Improvements to Bootstrap Home Page  (Exp 8.1 to 8.6)
+../story/index.htm?../myStories/exprWeek09.txt                    Week  9 - SVG, Snippet Box, Keyframe Animation (Exp 9.1 to 9.5)
+../story/index.htm?../myStories/exprWeek10.txt                    Week 10 - IE and Chrome Animation              (Exp 10.1 to 10.)    
