@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SVG Animation</title>
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+    <script src="../../Scripts/smil.user.js"></script>
+
+    <style id="KeyframeStyle">
+        .myBox {
+            position: relative;
+            top: 110px;
+            left: 250px;
+            -webkit-animation: myBoxAnimate 6s forwards;
+            animation: myBoxAnimate 6s forwards;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myBoxAnimate {
+            from {
+                -webkit-transform: scale(1, 1);
+                fill: lime;
+            }
+
+            to {
+                -webkit-transform: scale(2.66, 3);
+                fill: red;
+            }
+        }
+        /* Standard syntax */
+        @keyframes myBoxAnimate {
+            from {
+                transform: scale(1, 1);
+                fill: lime;
+            }
+
+            to {
+                transform: scale(2.66, 3);
+                fill: red;
+            }
+        }
+
+
+        .myText {
+            position: relative;
+            -webkit-animation: myTextAnimate 5s forwards;
+            animation: myTextAnimate 5s forwards;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myTextAnimate {
+            0% {
+                visibility: hidden;
+                top: -100px;
+                left: 0;
+                transform: scale(1, 1) rotate(-30deg);
+            }
+
+            20% {
+                visibility: hidden;
+                top: -100px;
+                left: 0;
+                transform: scale(1, 1) rotate(-30deg);
+            }
+
+            20.001% {
+                visibility: visible;
+                top: -100px;
+                left: 0;
+                transform: scale(1, 1) rotate(-30deg);
+            }
+
+            100% {
+                top: 0px;
+                left: 250px;
+                transform: scale(2, 2) rotate(0deg);
+            }
+        }
+        /* Standard syntax */
+        @keyframes myTextAnimate {
+            0% {
+                visibility: hidden;
+                top: -100px;
+                left: 0;
+                transform: scale(1) rotate(-30deg);
+            }
+
+            20% {
+                visibility: hidden;
+                top: -100px;
+                left: 0;
+                transform: scale(1) rotate(-30deg);
+            }
+
+            20.001% {
+                visibility: visible;
+                top: -100px;
+                left: 0;
+                transform: scale(1) rotate(-30deg);
+            }
+
+            100% {
+                top: 0px;
+                left: 250px;
+                transform: scale(2) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body class="container">
+    <div id="Experiments">
+        <h1>SVG Animation</h1>
+        <a href="#Exp1">
+            <h4>Experiment 1: &nbsp; SVG Animation</h4>
+        </a>
+        <a href="#Exp2">
+            <h4>Experiment 2: &nbsp; CSS Keyframe Animation</h4>
+        </a>
+        <a href="#Exp3">
+            <h4>Experiment 3: &nbsp; In Explorer</h4>
+        </a>
+        <a href="#Exp4">
+            <h4>Experiment 4: &nbsp; In Chrome</h4>
+        </a>
+        <a href="#Conclusion">
+            <h4>Conclusion</h4>
+        </a>
+    </div>
+    <hr />
+    <div id="Tests">
+        <h4>Tests</h4>
+        <p>
+            These experiments explore animation of SVG Obects.  The experiment does this both with animation internal to the SVG and
+            externally with keyframes.
+        </p>
+        <p>
+            There are differences between how IE and Chrome handle them.  To see several of the effeccts you need to run Chrome and IE
+            side by side each taking up half the screen.
+        </p>
+        <br />
+        <div style="height:650px; width:830px; border:3px solid red; padding:10px">
+            <svg width="800" height="300">
+                <rect id="rec" x="300" y="100" width="300" height="100" style="fill:lime">
+                    <animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="250" to="0" />
+                    <animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" />
+                    <animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" />
+                    <animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" />
+                    <animate attributeName="fill" attributeType="CSS" begin="2s" dur="4s" fill="freeze" from="lime" to="red" />
+                </rect>
+                <g transform="translate(100,100)">
+                    <text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24pt; visibility:hidden">
+                        It's SVG Animate!
+                        <set attributeName="visibility" attributeType="CSS" begin="1s" dur="5s" fill="freeze" to="visible" />
+                        <animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" />
+                        <animate attributeName="fill" attributeType="CSS" begin="1s" dur="5s" fill="freeze" from="red" to="blue" />
+                        <animateTransform attributeName="transform" attributeType="XML" begin="1s" dur="5s" fill="freeze" type="rotate" from="-30" to="0" />
+                        <animateTransform attributeName="transform" attributeType="XML" begin="1s" dur="5s" fill="freeze" type="scale" from="1" to="2" additive="sum" />
+                    </text>
+                </g>
+            </svg>
+            <br />
+            <div width="800" height="300" style="float:left">
+                <div class="myBox">
+                    <img src="../Week10/SVG_Box.svg" />
+                </div>
+                <div class="myText">
+                    <img src="../Week10/SVG_Text.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="Exp1">
+        <h4>Experiment 1: &nbsp; SVG Animation</h4>
+        <p>
+            I started with demo from w3schools.  The link to it is in references below.  This demo does a move, rotate and scale text.
+            It also grows and changes color of a rectangle.
+        </p>
+        <p>
+            This demo embeds the animation in the SVG.  It is able to animate components of the SVG seperately.  The code snippet below shows how this is accomplished.
+        </p>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="snippetBox2">
+                    <ul>
+                        <li>&lt;svg width="800" height="300"></li>
+                        <li> &nbsp; &nbsp; &lt;rect id="rec" x="300" y="100" width="300" height="100" style="fill:lime"></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="250" to="0" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="0" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="300" to="800" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="fill" attributeType="CSS" begin="2s" dur="4s" fill="freeze" from="lime" to="red" /></li>
+                        <li> &nbsp; &nbsp; &lt;/rect></li>
+                        <li> &nbsp; &nbsp; &lt;g transform="translate(100,100)"></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24pt; visibility:hidden"></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; It's SVG Animate!</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;set attributeName="visibility" attributeType="CSS" begin="1s" dur="5s" fill="freeze" to="visible" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;animateMotion path="M 0 0 L 100 100" begin="1s" dur="5s" fill="freeze" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;animate attributeName="fill" attributeType="CSS" begin="1s" dur="5s" fill="freeze" from="red" to="blue" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;animateTransform attributeName="transform" attributeType="XML"</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; begin="1s" dur="5s" fill="freeze" type="rotate" from="-30" to="0" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;animateTransform attributeName="transform" attributeType="XML"</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; begin="1s" dur="5s" fill="freeze" type="scale" from="1" to="2" additive="sum" /></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;/text></li>
+                        <li> &nbsp; &nbsp; &lt;/g></li>
+                        <li>&lt;/svg></li>
+                    </ul>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <h5 class="titleCenter">Animation Embedded in the SVG</h5>
+        <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+    </div>
+    <hr />
+    <div id="Exp2">
+        <h4>Experiment 2: &nbsp; CSS Keyframe Animation</h4>
+        <p>
+            My main experiment was to figure out how to duplicate this effect in CSS keyframes.  I drew the pictures in seperate SVG files.
+        </p>
+        <p>
+            The code snippet below shows how simple this task is in HTML.  The coplexity is in the keyframes.
+        </p>
+        <p>
+            One thing to notice is the ability to change colors in the embedded SVG animation.  This cannot be done in the CSS version.
+            CSS deals with the entire object and cannot modify its internal properties.
+        </p>
+        <p>
+            Another difference is the timing.  All values are set the same but it appears that the CSS version completes sooner.  This
+            is true in both Chrome and IE.  Actually they rectangle takes the same amount of time to zoom in in both cases.  In the embedded
+            version it changes the absolute size linearly.  In the CSS it zooms the percent size linearly.  This makes the absolute
+            size change non-linear.  Notice they both actually finish at the same time but the CSS version slow down as it approached the final point.  
+        </p>
+        <br />
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="snippetBox2">
+                    <ul>
+                        <li>&lt;div width="800" height="300" style="float:left"></li>
+                        <li> &nbsp; &nbsp; &lt;div class="myBox"></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="../Week10/SVG_Box.svg" /></li>
+                        <li> &nbsp; &nbsp; &lt;/div></li>
+                        <li> &nbsp; &nbsp; &lt;div class="myText"></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="../Week10/SVG_Text.svg" /></li>
+                        <li> &nbsp; &nbsp; &lt;/div></li>
+                        <li>&lt;/div></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <h5 class="titleCenter">Animation with CSS Keyframes</h5>
+
+        <p>
+            Note in the keyframe for the box I used the words "from" and "to" for the frame designation.  "0%" for "from" and "100%" for "to"
+            can be used interchangeably.  In this application since I only need 2 key frames then it is clearer to use the words instead of the numbers.
+        </p>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="snippetBox2">
+                    <ul>
+                        <li>&lt;style id="KeyframeStyle"></li>
+                        <li> &nbsp; &nbsp; .myBox {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; top: 110px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; left: 250px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: myBoxAnimate 6s forwards;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; animation: myBoxAnimate 6s forwards;</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; /* Chrome, Safari, Opera */</li>
+                        <li> &nbsp; &nbsp; @-webkit-keyframes myBoxAnimate {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; from {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: scale(1, 1);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fill: lime;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; to {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -webkit-transform: scale(2.66, 3);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fill: red;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; /* Standard syntax */</li>
+                        <li> &nbsp; &nbsp; @keyframes myBoxAnimate {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; from {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1, 1);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fill: lime;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; to {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(2.66, 3);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fill: red;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <h5 class="titleCenter">CSS Keyframes for Box</h5>
+
+        <p>
+            The keyframe for the text requirs more than 2 steps.  In this application it make more sense to use the percent numbers.
+            Also note how keeping it compatible for both IE and Chrome requires duplicating the code and is prone to mistakes.
+        </p>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="snippetBox2">
+                    <ul>
+                        <li> &nbsp; &nbsp; .myText {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; position: relative;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: myTextAnimate 5s forwards;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; animation: myTextAnimate 5s forwards;</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; /* Chrome, Safari, Opera */</li>
+                        <li> &nbsp; &nbsp; @-webkit-keyframes myTextAnimate {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: hidden;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1, 1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 20% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: hidden;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1, 1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 20.001% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: visible;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1, 1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 0px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 250px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(2, 2) rotate(0deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; /* Standard syntax */</li>
+                        <li> &nbsp; &nbsp; @keyframes myTextAnimate {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 0% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: hidden;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 20% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: hidden;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 20.001% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; visibility: visible;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: -100px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 0;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(1) rotate(-30deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li></li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; 100% {</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 0px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 250px;</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; transform: scale(2) rotate(0deg);</li>
+                        <li> &nbsp; &nbsp; &nbsp; &nbsp; }</li>
+                        <li> &nbsp; &nbsp; }</li>
+                        <li>&lt;/style></li>
+                    </ul>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <h5 class="titleCenter">CSS Keyframes for Text</h5>
+        <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+    </div>
+    <hr />
+    <div id="Exp3">
+        <h4>Experiment 3: &nbsp; In Internet Explorer</h4>
+        <p>
+            SVG graphics are animated internally by a spec called SMIL (Synchronized Multimedia Intergration Language).
+            SMIL like SVG are XML based.
+        </p>
+        <p>
+            Internet Explorer does not support this spec at this time.  IE requires a third party script to support
+            annimation embeded in an SVG.  The most popular one is FakeSmil.  It was started in 2008 and mostly complete
+            soon after.  It is only a partial implemtation and is missing several features of the standard and only partially
+            implements others.  Other than a few bug fixes little has been done on it for several years.  Mostly because all
+            browsers now support SMIL natively.  Internet Explorer is the last remaining major browser that does not.
+        </p>
+        <br />
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="snippetBox2">
+                    <ul>
+                        <li>&lt;script src="../../Scripts/smil.user.js">&lt;/script></li>
+                    </ul>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <h5 class="titleCenter">Fake Smile</h5>
+        <br />
+        <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+    </div>
+    <hr />
+    <div id="Exp4">
+        <h4>Experiment 4: &nbsp; In Chrome</h4>
+        <p>
+            The orginal demo work with Chrome.  When run side by side the final position of the text in the embedded SVG animation
+            is different than in IE.  Also in IE the text does not rotate.  I tracked it back and there is no way to get it to match.
+            Rotation is not implemented in FakeSmile.  Position probably comes form some of the partial implentations in in FakeSmile
+        </p>
+        <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+    </div>
+    <hr />
+    <div id="Conclusion">
+        <h4>Conclusion</h4>
+        <p>
+            Embeded animation of SVG is a better method than CSS Keyframes.  However, the lack of compatibillity between browsers
+            negates any benifits and embeded animation of SVG should not be used.
+        </p>
+        <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+    </div>
+    <hr />
+    <div id="Source">
+        <h3>Source Code </h3>
+        <a href="../../fileview/Default.aspx?~/myTests/Week10/SVG Animation.html" target="_blank">View Source: SVG Animation.html</a>
+        <br />
+        <a href="../../fileview/Default.aspx?~/myTests/Week10/SVG_Box.svg" target="_blank">View Source: SVG_Box.svg</a>
+        <br />
+        <a href="../../fileview/Default.aspx?~/myTests/Week10/SVG_Text.svg" target="_blank">View Source: SVG_Text.svg</a>
+        <br />
+    </div>
+    <hr />
+    <div id="References">
+        <h3>References</h3>
+        <a href="http://www.w3schools.com/svg/default.asp" target="_blank">w3schools SVG Tutorial</a>
+        <p>I continue to find this to be one of the best online references for many web technologies.</p>
+        <a href="http://www.w3schools.com/svg/tryit.asp?filename=trysvg_animatemotion3" target="_blank">w3schools SVG Animation Demo</a>
+        <p>This example provided the starting point for these experimetns.</p>
+        <a href="https://leunen.me/fakesmile/index.html" target="_blank"> FakeSmile</a>
+        <p>This is a javascript that partially imiplements the SMIL standard</p>
+    </div>
+    <hr />
+
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
