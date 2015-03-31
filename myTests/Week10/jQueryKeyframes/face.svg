@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     id="svgFace"
+     viewBox="0 0 100 100"
+     height="100"
+     width="100">
+    <g id="face">
+        <circle r="50"
+                cy="50"
+                cx="50.000008"
+                id="faceHead"
+                style="fill:#ffff00;" />
+        <path d="m 90,50 a 40,40 0 0 1 -20,35 40,40 0 0 1 -40,0 40,40 0 0 1 -20,-35"
+              id="faceSmile"
+              style="fill:#000000;" />
+        <path d="m 85,49 a 35,35 0 0 1 -17.5,30 35,35 0 0 1 -35,0 35,35 0 0 1 -17.5,-30"
+              id="faceSmileFill"
+              style="fill:#ffff00;" />
+        <circle r="7.5"
+                cy="30"
+                cx="32.5"
+                id="faceEyeLeft"
+                style="fill:#000000;" />
+        <circle r="7.5"
+                cy="50"
+                cx="50"
+                id="faceNose"
+                style="fill:#000000;" />
+        <circle r="7.5"
+                cy="30"
+                cx="67.5"
+                id="faceEyeRight"
+                style="fill:#000000;" />
+    </g>
+</svg>
