@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Carousel</title>
+    <link href="../../myCSS/slick/slick.css" rel="stylesheet" />
+    <link href="../../myCSS/slick/slick-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myGrid.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../myCSS/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.autoplay').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: false,
+                arrows: false,
+            });
+        });
+    </script>
+</head>
+
+<body class="bodyLimit">
+    <div class="autoplay">
+        <div><p>Slide1</p></div>
+        <div><p>Slide2</p></div>
+        <div><p>Slide3</p></div>
+        <div><p>Slide4</p></div>
+        <div><p>Slide5</p></div>
+        <div><p>Slide6</p></div>
+    </div>
+    <hr />
+
+</body>
+</html>

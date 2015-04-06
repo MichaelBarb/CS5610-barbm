@@ -2,6 +2,13 @@
     margin: 20px;
 }
 
+.bodyLimit {
+    margin-left: auto;
+    max-width: 960px;
+    margin-right: auto;
+}
+
+
 p, ul, ol {
     color: black;
 }
@@ -27,6 +34,7 @@ ol {
     margin-left: auto;
     margin-right: auto;
 }
+
 .snippetText {
     font-family: monospace;
     font-size: 80%;
@@ -41,11 +49,12 @@ ol {
     margin-left: auto;
     margin-right: auto;
 }
-.snippetBox2 ul {
-    font-family: monospace;
-    font-size: 80%;
-    margin: 2px;
-}
+
+    .snippetBox2 ul {
+        font-family: monospace;
+        font-size: 80%;
+        margin: 2px;
+    }
 
 
 
@@ -54,12 +63,13 @@ ol {
     background: #d0e0ff;
     border: solid 3px black;
     border-radius: 0;
-    font-family:monospace;
-    font-size:80%;
+    font-family: monospace;
+    font-size: 80%;
 }
-.sinppetWell ul{
-    margin-bottom:0;
-}
+
+    .sinppetWell ul {
+        margin-bottom: 0;
+    }
 
 .Indent1 {
     margin: 20px;
@@ -79,4 +89,57 @@ ol {
 
 .carousel-indicators .active {
     background-color: slategray;
+}
+
+.myCarouselGradient {
+    /*background: linear-gradient(to right, steelblue , silver, Steelblue )*/
+    background: linear-gradient(to right, #7C7C90, #BCBCCC, #7C7C90 );
+}
+
+.myTextCenter {
+    text-align: center;
+}
+
+my-h1 {
+    display: block;
+    font-size: 3em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+my-h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+my-h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+my-h4 {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

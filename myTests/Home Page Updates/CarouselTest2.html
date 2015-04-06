@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Simple Slick Carousel Demo</title>
+
+    <link href="../../myCSS/slick/slick.css" rel="stylesheet" />
+    <link rel='stylesheet prefetch' href='http://cdn.foundation5.zurb.com/foundation.css'>
+
+    <style>
+        .content {
+            min-height: 200px;
+        }
+
+        .faq-content {
+            min-height: 500px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="slick-multislider">
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 1</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 2</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 3</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 4</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 5</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div>
+            <img src="http://placehold.it/700x300" alt="">
+            <h5>Image Title 6</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+    </div>
+
+    <script src='http://cdn.foundation5.zurb.com/foundation.js'></script>
+    <script src="../../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../../myCSS/slick/slick.min.js"></script>
+
+    <!--<script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>-->
+    <!--<script src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>-->
+
+    <script>
+        //$(document).foundation();
+        var $windowWidth = $(window).width();
+        $(window).resize(function () {
+            var $windowWidth = $(window).width();
+            if ($windowWidth > 1 && $windowWidth < 640) {
+                $('.slick-multislider').unslick();
+                $('.slick-multislider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true
+                });
+            } else {
+                $('.slick-multislider').unslick();
+                $('.slick-multislider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true
+                });
+            }
+        });
+        if ($windowWidth > 1 && $windowWidth < 640) {
+            $('.slick-multislider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+        } else {
+            $('.slick-multislider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+        }
+        //@ sourceURL=pen.js
+    </script>
+
+</body>
+
+</html>

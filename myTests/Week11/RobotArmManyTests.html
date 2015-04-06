@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <!--<link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <script src="../../Scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery.keyframes.min.js"></script>
+    <script src="jQueryKeyframe.html.js"></script>-->
+
+    <style>
+        .frame {
+            width: 400px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            /*text-align: center;*/
+            padding: 10px;
+            border: 2px solid red;
+        }
+
+
+        .arm1 {
+            position: absolute;
+            padding:0;
+            margin:0;
+            border:0;
+            animation-name: rot1;
+            animation-duration: 2s;
+            animation-delay: .5s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            transform-origin: 25px 25px;
+            animation-timing-function: linear;
+            animation-play-state: running !important;
+        }
+
+        .arm2 {
+            position: absolute;
+            /*animation-name: rot2;*/
+            /*animation-duration: 2s;*/
+            /*animation-delay: .5s;*/
+            /*animation-iteration-count: 1;*/
+            /*animation-direction: normal;*/
+            padding:0;
+            margin:0;
+            border:0;
+            transform-origin: 200px 0px;
+            /*animation-timing-function: linear;*/
+            /*animation-play-state: running !important;*/
+            /*transform: translate(150px, -55px) rotate(90deg);*/
+            /*transform: translate(150px, -55px) rotate(90deg);*/
+            /*transform: rotate(90deg);*/
+        }
+
+        @keyframes rot1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            99.9999% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes rot2 {
+            0% {
+                transform: rotate(0deg) translate(150px, -55px);
+            }
+
+            50% {
+                transform: rotate(180deg) translate(150px, -55px);
+            }
+
+            99.9999% {
+                transform: rotate(360deg) translate(150px, -55px);
+            }
+
+            100% {
+                transform: rotate(0deg) translate(150px, -55px);
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <!--<img src="Arm.svg" />
+        <br />
+        <img src="Arm.svg" class="arm1" />
+        <br />-->
+        <p style="text-align:center">Box 1</p>
+        <div class="frame">
+            <img src="Arm.svg" style="transform:rotate(0deg); " />
+            <img src="Arm.svg" style="transform:rotate(15deg); " />
+            <img src="Arm.svg" style="transform:rotate(30deg); " />
+            <img src="Arm.svg" style="transform:rotate(45deg); " />
+            <img src="Arm.svg" style="transform:rotate(90deg); " />
+        </div>
+        <p style="text-align:center">Box 2</p>
+        <div class="frame">
+            <img src="Arm.svg" style="position:absolute; transform:translate(0px, 0px) rotate( 0deg);" />
+            <!--<img src="Arm.svg" style="position:absolute; transform:translate(25px, 100px) rotate(15deg);" />-->
+            <!--<img src="Arm.svg" style="position:absolute; transform:translate(25px, 37px) rotate(30deg);" />-->
+            <img src="Arm.svg" style="position:absolute; transform:translate(53px, 22px) rotate(45deg);" />
+            <img src="Arm.svg" style="position:absolute; transform:translate(75px, 75px) rotate(90deg);" />
+        </div>
+        <p style="text-align:center">Box 3</p>
+        <div class="frame">
+            <img src="Arm2.svg" style="position:absolute; transform:translate(0px, 150px) rotate( 0deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-2px, 131px) rotate(-15deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-10px, 113px) rotate(-30deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-22px, 97px) rotate(-45deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-37px, 85px) rotate(-60deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-54px, 78px) rotate(-75deg);" />
+            <img src="Arm2.svg" style="position:absolute; transform:translate(-75px, 75px) rotate(-90deg);" />
+        </div>
+        <p style="text-align:center">Box 4</p>
+        <div class="frame">
+            <img src="Arm2.svg" class="arm1" />
+        </div>
+        <p style="text-align:center">Box 5</p>
+        <div class="frame">
+            <div class="arm1">
+                <img src="Arm2.svg""/>
+            </div>
+        </div>
+        <p style="text-align:center">Box 6</p>
+        <div class="frame">
+            <div class="arm1">
+                <img src="Arm2.svg" style="padding:0; margin:0; border:0;"/>
+                <div class="arm2">
+                    <img src="Arm2.svg" style="padding:0; margin:0; border:0;"/>
+                </div>
+            </div>
+        </div>
+        <!--<p style="text-align:center">Box 4</p>
+        <div class="frame">
+            <div class="arm1">
+                <img src="Arm.svg" />
+            </div>
+            <div class="arm2">
+                <img src="Arm.svg" />
+            </div>
+        </div>
+        <div class="frame">
+            <img src="Arm.svg" class="arm1" />
+            <img src="Arm.svg" class="arm2" />
+        </div>-->
+    </div>
+</body>
+</html>

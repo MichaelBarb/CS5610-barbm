@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!--
+    Copyright (c) 2015 by Asif (http://codepen.io/asif999/pen/ceLuv)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    -->
+
+    <title>CodePen - Slick Slider - 1 for small</title>
+
+    <link rel='stylesheet prefetch' href='http://cdn.foundation5.zurb.com/foundation.css'>
+    <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css'>
+
+    <style>
+        .content {
+            min-height: 200px;
+        }
+
+        .faq-content {
+            min-height: 500px;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function(t) {};
+        window.open = function(){ console.log('window.open is disabled.'); };
+        window.print = function(){ console.log('window.print is disabled.'); };
+        // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function(){};
+        }
+    </script>
+
+    <!--<script src="//assets.codepen.io/assets/libs/modernizr-0e41cf622f0788eca25945c37bdc5b15.js">"></script>-->
+
+</head>
+
+<body>
+
+    <div class="row text-center slick-multislider">
+        <div class="large-4 small-12 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div class="large-4 small-12 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div class="large-4 small-12 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div class="large-4 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div class="large-4 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+        <div class="large-4 columns">
+            <img src="http://placehold.it/700x300" alt="">
+            <h5 class="h5-title-margin-top">Image Title 1</h5>
+            <div class="title-blue-line-content"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, voluptatibus eaque ratione quam natus ad!</p>
+        </div>
+    </div>
+
+    <script src='//assets.codepen.io/assets/libs/fullpage/jquery-c152c51c4dda93382a3ae51e8a5ea45d.js'></script>
+    <script src='http://cdn.foundation5.zurb.com/foundation.js'></script>
+    <script src='http://cdn.jsdelivr.net/jquery.slick/1.3.7/slick.min.js'></script>
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>
+
+    <script src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-6c99970ade81e43be51fa877be0f7600.js"></script>
+
+    <script>
+        $(document).foundation();
+        var $windowWidth = $(window).width();
+        $(window).resize(function () {
+            var $windowWidth = $(window).width();
+            if ($windowWidth > 1 && $windowWidth < 640) {
+                $('.slick-multislider').unslick();
+                $('.slick-multislider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true
+                });
+            } else {
+                $('.slick-multislider').unslick();
+                $('.slick-multislider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true
+                });
+            }
+        });
+        if ($windowWidth > 1 && $windowWidth < 640) {
+            $('.slick-multislider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+        } else {
+            $('.slick-multislider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+        }
+        //@ sourceURL=pen.js
+    </script>
+
+</body>
+
+</html>

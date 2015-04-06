@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Navigation Bar</title>
+
+    <style>
+        .myNav-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .myNav-li {
+            float: right;
+            border-left: 1px solid white;
+        }
+
+        .myNav-divider{
+            display:block;
+            float:right;
+            width:5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 8px 0;
+            background-color:white;
+        }
+
+        .myNav-a:link, .myNav-a:visited {
+            display: block;
+            width: 120px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #FFFFFF;
+            background-color: #0000ff;
+            text-align: center;
+            padding: 8px 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .myNav-a:hover {
+            background-color: #ff00ff;
+        }
+
+        .myNav-a:active {
+            background-color: #ff0000;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="background-color:#0000ff">
+        <ul class="myNav-ul">
+            <li class="myNav-li"><a href="../../images/autoimage.aspx" target="_blank" class="myNav-a">Images</a></li>
+            <li class="myNav-divider">&nbsp;</li>
+            <li class="myNav-li"><a href="../../autofile.aspx" target="_blank" class="myNav-a">Auto File</a></li>
+            <li class="myNav-li"><a href="../../filelist.aspx" target="_blank" class="myNav-a">File List</a></li>
+            <li class="myNav-li"><a href="../../textview/default.aspx" target="_blank" class="myNav-a">Text View</a></li>
+            <li class="myNav-divider">&nbsp;</li>
+            <li class="myNav-li"><a href="../../searchtree/default.aspx" target="_blank" class="myNav-a">Search Tree</a></li>
+            <li class="myNav-li"><a href="../../search/default.aspx" target="_blank" class="myNav-a">Search</a></li>
+            <li class="myNav-divider">&nbsp;</li>
+            <li class="myNav-li"><a href="../../source/default.aspx" target="_blank" class="myNav-a">Source</a></li>
+            <li class="myNav-li"><a href="../../statistics/default.aspx" target="_blank" class="myNav-a">Statistics</a></li>
+            <li class="myNav-li"><a href="../../sitestatistics/default.aspx" target="_blank" class="myNav-a">Site Statistics</a></li>
+            <li class="myNav-divider">&nbsp;</li>
+        </ul>
+    </div>
+
+</body>
+</html>

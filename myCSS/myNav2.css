@@ -1,0 +1,48 @@
+﻿.myNav-bar {
+    background-color: #0000ff;
+}
+
+
+.myNav-li {
+    float: right;
+    border-left: 1px solid gray;
+}
+
+.myNav-divider {
+    display: block;
+    float: right;
+    width: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 0;
+    background-color: white;
+}
+
+.myNav-row {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.myNav-link:link, .myNav-link:visited {
+    display: inline-block;
+    float:left;
+    width: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #0000ff;
+    text-align: center;
+    padding: 8px 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid gray;
+}
+
+.myNav-link:hover {
+    background-color: #ff00ff;
+}
+
+.myNav-link:active {
+    background-color: #ff0000;
+}
