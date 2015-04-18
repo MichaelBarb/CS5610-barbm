@@ -28,3 +28,22 @@
     padding: 10px;
     border: 2px solid red;
 }
+
+.snippetBox {
+    padding: 10px;
+    border: solid 3px black;
+    background-color: #d0e0ff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .snippetBox ul {
+        font-family: monospace;
+        font-size: 80%;
+        margin: 2px;
+        list-style:none;
+    }
+
+h3, h4, h5, h6 {
+    font-weight:bold;
+}

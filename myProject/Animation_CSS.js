@@ -6,7 +6,7 @@ var arm1angleLast = '0';
 var arm2angleLast = '0';
 var movToggle = 0;
 
-// ********** Load **********
+// ********** Initil Load **********
 $(window).load(function () {
 
     // Get the css browser code (ie: -moz-)
@@ -19,12 +19,12 @@ $(window).load(function () {
     $('.arm1').css(transform, 'translate(200px,200px)');
     $('.arm2').css(transform, 'translate(100px, -40px)');
 
-    // Adding a new animation sequences (keyframe)
+    // ***** Continous Motion Frames *****
     $.keyframe.define([{
         name: 'rot1',
         '0%': { 'transform': 'translate(200px,200px) rotate(0deg)' },
         '50%': { 'transform': 'translate(200px,200px) rotate(180deg)' },
-        '50.001%': { 'transform': 'translate(200px,200px) rotate(-179deg)' },
+        '50.001%': { 'transform': 'translate(200px,200px) rotate(-180deg)' },
         '100%': { 'transform': 'translate(200px,200px) rotate(0deg)' }
     }, {
         name: 'rot2',
@@ -37,6 +37,7 @@ $(window).load(function () {
     moveArmsUpdateKeyframes();
 });
 
+// ********** Move Frames **********
 function moveArmsUpdateKeyframes() {
     //Retreive New From Screen
     arm1angleNew = $("#arm1angleNewIn").val();
@@ -72,7 +73,7 @@ function moveArmsUpdateKeyframes() {
     }
 }
 
-// ********** Play **********
+// ********** Continous Motion Play **********
 function play(animation) {
     changeSpeed();
     $('.arm1').resetKeyframe(function () {
@@ -101,7 +102,7 @@ function play(animation) {
     });
 }
 
-// ********** Basic Controlws **********
+// ********** Basic Controls **********
 function pauseFrame() {
     // freeze keyframe animation and kill callback
     $('.arm1').pauseKeyframe();
@@ -123,13 +124,11 @@ function resetFrame() {
 }
 
 // example callback function
-
 function increment() {
     $('#cb').html(parseInt($('#cb').html()) + 1);
 }
 
-// ********** Mine **********
-
+// ********** Utilities **********
 function changeSpeed() {
     var newSpeed = $("#arm1speedIn").val();
     arm1speed = newSpeed + 's';
@@ -148,9 +147,12 @@ function moveArmsUpdate() {
     arm1angleLast = arm1angleNew;
     arm2angleLast = arm2angleNew;
 }
+
+// ********** Move Play **********
 function moveArms(animation) {
     changeSpeed();
-    moveArmsUpdate();
+    //moveArmsUpdate();
+    moveArmsUpdateKeyframes();
     arm1angleLast = arm1angleNew;
     arm2angleLast = arm2angleNew;
 
@@ -159,7 +161,7 @@ function moveArms(animation) {
         $('.arm1').resetKeyframe(function () {
             $('.arm1').playKeyframe({
                 name: 'mov1a',
-                duration: arm2speed,
+                duration: arm1speed,
                 timingFunction: 'linear',
                 delay: 0,
                 iterationCount: '1',
@@ -185,7 +187,7 @@ function moveArms(animation) {
         $('.arm1').resetKeyframe(function () {
             $('.arm1').playKeyframe({
                 name: 'mov1b',
-                duration: arm2speed,
+                duration: arm1speed,
                 timingFunction: 'linear',
                 delay: 0,
                 iterationCount: '1',

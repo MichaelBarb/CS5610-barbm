@@ -40,6 +40,8 @@
                     still some small differences.  On other browsers there may be considerable differences in how these 
                     demos work.
                 </p>
+                <h3 class="text-center text-danger ">Warning!!!  May Not fully function in Chrome</h3>
+                <h3 class="text-center text-danger ">Works properly in Internet Explorer</h3>
             </div>
             <hr />
             <div class="row">
