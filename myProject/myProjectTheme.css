@@ -1,0 +1,30 @@
+﻿body {
+    /*margin-left: auto;
+    max-width: 960px;
+    margin-right: auto;*/
+    margin-top: -20px;
+}
+
+.titleContainer {
+    margin-left: auto;
+    max-width: 960px;
+    margin-right: auto;
+    background: none;
+    text-align: center;
+}
+
+.titleGradient {
+    /*background: linear-gradient(to right, steelblue , silver, Steelblue )*/
+    /*background: linear-gradient(to right, #7C7C90, #BCBCCC, #7C7C90 );*/
+    background: linear-gradient(to right, #7777B0, #BCBCCC, #7777B0 );
+}
+
+.frame {
+    width: 474px;
+    height: 474px;
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+    padding: 10px;
+    border: 2px solid red;
+}

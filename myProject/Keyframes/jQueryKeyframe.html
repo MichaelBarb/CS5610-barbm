@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery.Keyframe Example</title>
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../../myCSS/myTheme.css" rel="stylesheet" />
+
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../Scripts/jquery.keyframes.min.js"></script>
+    <script src="jQueryKeyframe.html.js"></script>
+
+    <!-- ********** Styles ********** -->
+    <style>
+        .animationTests {
+            text-align: center;
+        }
+
+        .ball-container {
+            width: 600px;
+            height: 125px;
+            margin-left: auto;
+            margin-right: auto;
+            /*text-align: center;*/
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+
+        .ball {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: -240px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="Experiments">
+            <h1>jQuery.Keyframe</h1>
+            <a href="#Exp5">
+                <h4>Experiment 5: &nbsp; Using SVG Object</h4>
+            </a>
+            <a href="#Exp2">
+                <h4>Experiment 2: &nbsp; CSS Keyframe Animation</h4>
+            </a>
+            <a href="#Exp3">
+                <h4>Experiment 3: &nbsp; In Explorer</h4>
+            </a>
+            <a href="#Exp4">
+                <h4>Experiment 4: &nbsp; In Chrome</h4>
+            </a>
+            <a href="#Conclusion">
+                <h4>Conclusion</h4>
+            </a>
+        </div>
+        <hr />
+        <div>
+            <h4>Summary</h4>
+            <p>
+                In the last set of experiments I came to the conclusion that animation needed to come from JavaScript.
+                Also, CSS Keyframes is a great tool.
+                I found a tool that facilates developement of Keyframes in JavaScript.
+            </p>
+        </div>
+        <hr />
+        <div id="Tests">
+            <h4>Tests</h4>
+            <div class="animationTests">
+                <div class="ball-container">
+                    <img src="face.svg" class="ball" />
+                </div>
+                <div>
+                    <br />
+                    <input type="button" onclick="play('normal')" value="Ease Roll" />
+                    <input type="button" onclick="play('linear')" value="Linear Roll" />
+                    <input type="button" onclick="play('delay')" value="2 Second Delay" />
+                    <input type="button" onclick="play('once')" value="Roll Once" />
+                    <input type="button" onclick="play('spin')" value="Spin" />
+                    <input type="button" onclick="play('multi')" value="Multiple Animations" />
+                    <br />
+                    <input type="button" onclick="pause()" value="Pause" />
+                    <input type="button" onclick="resume()" value="Resume" />
+                    <input type="button" onclick="reset()" value="Reset" />
+                    <br />
+                    <br />Callback count: <b id="cb">0</b>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <h2>Setup Animation</h2>
+
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-3">
+                <label>Speed (Seconds):</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="speedIn" value="10s">
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-default" id="changeSpeed">Change Speed</button>
+            </div>
+            <div class="col-sm-3"></div>
+       </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-3">
+                <label>Move (degrees):</label>
+            </div>
+            <div class="col-sm-2">
+                <input type="text" id="angleIn" value="90deg">
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-default" id="moveAngle">Move to Angle</button>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <hr />
+        <div id="Exp1">
+            <h4>Experiment 1: &nbsp; SVG Animation</h4>
+            <p>
+                I started with demo from w3schools.  The link to it is in references below.  This demo does a move, rotate and scale text.
+                It also grows and changes color of a rectangle.
+            </p>
+            <p>
+                This demo embeds the animation in the SVG.  It is able to animate components of the SVG seperately.  The code snippet below shows how this is accomplished.
+            </p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div class="snippetBox2">
+                        <ul>
+                            <li>&lt;</li>
+                            <li> &nbsp; &nbsp; &lt;</li>
+                            <li> &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <h5 class="titleCenter">Animation Embedded in the SVG</h5>
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <hr />
+        <div id="Conclusion">
+            <h4>Conclusion</h4>
+            <p>
+                Embeded animation of SVG is a better method than CSS Keyframes.  However, the lack of compatibillity between browsers
+                negates any benifits and embeded animation of SVG should not be used.
+            </p>
+            <a href="#Experiments"><h4><small>Back to Experiment List</small></h4></a>
+        </div>
+        <hr />
+        <div id="Source">
+            <h3>Source Code </h3>
+            <a href="../../../fileview/Default.aspx?~/myTests/Week10/SVG Animation.html" target="_blank">View Source: SVG Animation.html</a>
+            <br />
+            <a href="../../../fileview/Default.aspx?~/myTests/Week10/SVG_Box.svg" target="_blank">View Source: SVG_Box.svg</a>
+            <br />
+            <a href="../../../fileview/Default.aspx?~/myTests/Week10/SVG_Text.svg" target="_blank">View Source: SVG_Text.svg</a>
+            <br />
+        </div>
+        <hr />
+        <div id="References">
+            <h3>References</h3>
+            <a href="http://www.w3schools.com/svg/default.asp" target="_blank">w3schools SVG Tutorial</a>
+            <p>I continue to find this to be one of the best online references for many web technologies.</p>
+            <a href="http://jquerykeyframes.github.io/jQuery.Keyframes/" target="_blank">jQuery.Keframe</a>
+            <p>This JavaScrip allows you work with Keyframes in JavaScript.</p>
+        </div>
+        <hr />
+
+    </div>
+</body>
+</html>

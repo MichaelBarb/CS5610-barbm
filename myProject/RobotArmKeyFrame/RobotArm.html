@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link href="../../myBootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../myBootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../myProjectTheme.css" rel="stylesheet" />
+
+    <script src="../../Scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../myBootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Scripts/jquery.keyframes.min.js"></script>
+    <script src="RobotArm.html.js"></script>
+
+
+    <style>
+        .armImage {
+            height: 40px;
+            width: 140px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .arm1 {
+            position: absolute;
+            height: 40px;
+            width: 140px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            transform-origin: 20px 20px;
+            -webkit-transform-origin: 20px 20px;
+        }
+
+        .arm2 {
+            position: relative;
+            height: 40px;
+            width: 140px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            transform-origin: 20px 20px;
+            -webkit-transform-origin: 20px 20px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="frame">
+            <div class="arm1">
+                <img src="RobotArm1.svg" class="armImage" />
+                <div class="arm2">
+                    <img src="RobotArm2.svg" class="armImage" />
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h2>Control Animation</h2>
+            <button type="button" class="btn btn-success btn-lg" style="width:200px" onclick="play()">Run Continous</button>
+            <button type="button" class="btn btn-success btn-lg" style="width:200px" onclick="moveArmsUpdate()">Update Keyframes</button>
+            <button type="button" class="btn btn-success btn-lg" style="width:200px" onclick="moveArms()">Move To Angle</button>
+            <br /><br />
+            <button type="button" class="btn btn-primary" onclick="pause()">Pause</button>
+            <button type="button" class="btn btn-primary" onclick="resume()">Resume</button>
+            <button type="button" class="btn btn-warning" onclick="reset()">Reset</button>
+        </div>
+        <div class="text-center">
+            <h2>Setup Animation</h2>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th class="text-center">Speed (sec)</th>
+                                <th class="text-center">Last Angle (deg)</th>
+                                <th class="text-center">New Angle (deg)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Arm 1</b></td>
+                                <td><input type="text" id="arm1speedIn" value="2"></td>
+                                <td><p id="arm1angleLast"></p></td>
+                                <td><input type="text" id="arm1angleNewIn" value="45"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Arm 2</b></td>
+                                <td><input type="text" id="arm2speedIn" value="2"></td>
+                                <td><p id="arm2angleLast"></p></td>
+                                <td><input type="text" id="arm2angleNewIn" value="45"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <br />
+            <br />Callback count: <b id="cb">0</b>
+            <br />
+
+        </div>
+</body>
+</html>
