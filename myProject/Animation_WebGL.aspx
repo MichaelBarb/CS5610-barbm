@@ -10,7 +10,7 @@
 
     <script src="../Scripts/jquery-2.1.3.min.js"></script>
     <script src="../myBootstrap/js/bootstrap.js"></script>
-    <script src="../../Scripts/three-js/three.min.js"></script>
+    <script src="../Scripts/three-js/three.min.js"></script>
     <script src="Animation_WebGL.js"></script>
 
 
@@ -93,9 +93,6 @@
                         </div>
                     </div>
                 </div>
-                <hr />
-
-                <p style="float: right">&copy; 2015 Michael Barb, MSCS, Northeastern Univ.</p>
             </div>
 
             <hr />
