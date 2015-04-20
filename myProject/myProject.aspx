@@ -84,10 +84,17 @@
                 <div class="col-sm-6">
                     <h2>Conclusions</h2>
                     <p>
-                        CSS Animation while much easier to use has an inconsistant implemetaion and should be avoided.  WebGL is well suit for 
-                        any kind of animation imagined.  It has a very large learning curve.  Most important it is hampered by JavaScript 
-                        being an untyped language and missing many features of modern programming languages line Java and C#.  While the results
-                        obtained with WebGL are impressive the time it takes to do anything may be prohibitive.  
+                        Interactive CSS animation has an inconsistant implemetaion and should be avoided. Non-interactive CSS animation
+                        is still a valid aternative. 
+                    </p>
+                    <p>
+                        WebGL is well suit for any kind of interactive animation imagined.  It has a very large learning curve but 
+                        there are libraries (three.js) that greatly simplify programming.  Still it is hampered by JavaScript being 
+                        an untyped language and  missing many features of modern programming languages like Java and C#.  
+                        While the results obtained with WebGL are impressive the libraries are huge.  In this experiment 400K.  
+                        The download time may make it prohibitive.  Finally, browser and device support for WebGL is growing rapidly.  
+                        Still, many older and cheaper mobile phones cannot handle it.  It is very difficult at this time to make a pro 
+                        or con recomendation about WebGL but the future trend is pro.
                     </p>
                 </div>
                 <div class="col-sm-3"></div>
