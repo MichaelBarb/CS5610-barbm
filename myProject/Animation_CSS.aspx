@@ -54,7 +54,8 @@
                     <img src="../myImage/css3.svg" height="200" style="margin-top: 20px" />
                 </div>
                 <div class="col-sm-9">
-                    <h1>CSS3 Animation</h1>
+                    <h1>Interactive<br />
+                        CSS3 Animation</h1>
                     <br />
                     <h3>CS5610 WebDevelopement Project</h3>
                     <h3>Michael Barb</h3>
@@ -126,6 +127,9 @@
                 </div>
             </div>
             <hr />
+            <h3 class="text-center text-danger ">Warning!!!  May Not fully function in Chrome</h3>
+            <h3 class="text-center text-danger ">Works properly in Internet Explorer</h3>
+            <hr />
             <div id="Index">
                 <h2>Index</h2>
                 <div class="row">
@@ -175,8 +179,8 @@
                     the 90° axis.
                 </p>
                 <p>
-                    Try changing the speeds while continuous motion is running.  The next time this button is hit 
-                    it will reset the arms and run them at the new speeds.
+                    Try changing the speeds while continuous motion is running.  When the button is pressed a second 
+                    time it will reset the arms and run them at the new speeds.
                 </p>
                 <h4>Button: Move To Angle</h4>
                 <p>
@@ -205,17 +209,17 @@
                 <p>
                     The table allows setup of each arm independently.
                 </p>
-                <h5>Speed(sec)</h5>
+                <h5>Speed (sec/360°)</h5>
                 <p>
                     The number of seconds to complete a motion.  In the case of Continuous motion it is the time 
                     for a complete 360° rotation of an arm.  For motion to an angle it is the time it will take 
                     to go from the start angle to the end angle.
                 </p>
-                <h5>Last Angle (sec) </h5>
+                <h5>Last Angle (deg) </h5>
                 <p>
                     The starting angle of the last “Move To Angle”.  It is change as soon as a new move is started.
                 </p>
-                <h5>New Angle (sec) </h5>
+                <h5>New Angle (deg) </h5>
                 <p>
                     The new angle for the next or current move.  It can be changed while a motion is running so 
                     you can be ready to start the next motion.
@@ -441,8 +445,11 @@
             <div id="Section8">
                 <h3>8. &nbsp; Conclusions</h3>
                 <p>
-                    CSS animation with keyframes should be avoided.  Some details of the specs are not totally 
-                    complete.  Implementations are not consistant.
+                    For non-interactive animation, CSS keyframes is a reasonable option. Interactive animation, CSS with keyframes 
+                    should be avoided.  Some details of the specs are not totally complete.  Implementations are not consistant.  
+                </p>
+                <p>
+                    jQuery.keyframes is a reasonably robust and effiecient solution if you want to deal with keyframes in JavaScript. 
                 </p>
                 <a href="#Index" class="pull-right">Back To Index</a>
             </div>

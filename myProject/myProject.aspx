@@ -17,7 +17,8 @@
     <form id="form1" runat="server">
         <div class="titleGradient">
             <div class="titleContainer  jumbotron">
-                <h1>Client Based Animation</h1>
+                <h1>Interactive<br />
+                    Client Based Animation</h1>
                 <br />
                 <h3>CS5610 WebDevelopement Project</h3>
                 <h3>Michael Barb</h3>
@@ -27,10 +28,16 @@
             <div>
                 <h4>Summary</h4>
                 <p>
-                    This project explores object animation implemented on the client.  The project deals with moving 
+                    This project explores interactive object animation implemented on the client.  The project deals with moving 
                     objects around on the screen.  It is more than just changing text styles or resizing boxes.   It 
-                    is more than a video or series of still frames most commonly seen. The client recalculates the 
-                    new position and renders them on the screen.  To very different approaches are explored. 
+                    is more than a video or streams of still frames most commonly seen. The client recalculates the 
+                    new position and renders them on the screen.  Two very different approaches are explored. 
+                </p>
+                <br />
+                <p>
+                    Having the client do the heavy work of animation allows it to be very interactive. Starting, stopping, and pausing 
+                    is explored but this can also be easily done with streaming animation.  Changing parameters and having the
+                    animation respond much more flexibility than possible with client based animation.
                 </p>
                 <br />
                 <p>
@@ -40,8 +47,6 @@
                     still some small differences.  On other browsers there may be considerable differences in how these 
                     demos work.
                 </p>
-                <h3 class="text-center text-danger ">Warning!!!  May Not fully function in Chrome</h3>
-                <h3 class="text-center text-danger ">Works properly in Internet Explorer</h3>
             </div>
             <hr />
             <div class="row">
@@ -80,10 +85,9 @@
                     <h2>Conclusions</h2>
                     <p>
                         CSS Animation while much easier to use has an inconsistant implemetaion and should be avoided.  WebGL is well suit for 
-                            any kind of animation imagined.  It has a very large learning curve.  Most important it is hampered by JavaScript 
-                            being an untyped language and missing many features of modern programming languages line Java and C#.  While the results
-                            obtained with WebGL are impressive the time it takes to do anything may be prohibitive.  
-                             
+                        any kind of animation imagined.  It has a very large learning curve.  Most important it is hampered by JavaScript 
+                        being an untyped language and missing many features of modern programming languages line Java and C#.  While the results
+                        obtained with WebGL are impressive the time it takes to do anything may be prohibitive.  
                     </p>
                 </div>
                 <div class="col-sm-3"></div>
